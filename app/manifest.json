@@ -1,0 +1,13 @@
+{
+  "name": "Mint — AI Website Builder",
+  "short_name": "Mint",
+  "description": "Build and edit your website by talking to Mint",
+  "start_url": "/app/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#98E8C1",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
