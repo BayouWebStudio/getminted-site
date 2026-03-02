@@ -174,7 +174,7 @@ async function doSend(text) {
   history.push({role:'user', content:text});
   showTyping();
   try {
-    const r = await fetch('https://api.bayouwebstudio.com/api/mint/chat', {
+    const r = await fetch('https://impartial-bear-607.convex.site/api/mint/chat', {
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({message:text, context:'getminted', history})
     });
