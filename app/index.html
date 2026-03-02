@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#98E8C1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mint">
+  <title>Mint — AI Website Builder</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --mint: #98E8C1;
+      --mint-dim: rgba(152,232,193,0.12);
+      --bg: #0a0a0a;
+      --surface: #111;
+      --surface2: #1a1a1a;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8e8e8;
+      --muted: #666;
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; overflow: hidden; }
+    #app { display: flex; flex-direction: column; height: 100dvh; max-width: 700px; margin: 0 auto; }
+
+    header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 16px; padding-top: calc(12px + var(--safe-top));
+      background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); flex-shrink: 0; z-index: 10;
+    }
+    .hdr-avatar { width: 36px; height: 36px; flex-shrink: 0; }
+    .hdr-title { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
+    .beta { font-size: 10px; font-weight: 500; color: var(--mint); background: var(--mint-dim);
+      border: 1px solid rgba(152,232,193,0.2); padding: 2px 7px; border-radius: 20px;
+      letter-spacing: 0.5px; text-transform: uppercase; }
+    .hdr-status { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); }
+    .sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 6px var(--mint); }
+
+    #chat {
+      flex: 1; overflow-y: auto; padding: 16px;
+      display: flex; flex-direction: column; gap: 12px;
+      scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+    }
+    #chat::-webkit-scrollbar { width: 3px; }
+    #chat::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .msg { display: flex; flex-direction: column; max-width: 85%; animation: fadeUp 0.25s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .msg.user { align-self: flex-end; align-items: flex-end; }
+    .msg.mint { align-self: flex-start; align-items: flex-start; }
+
+    .bubble { padding: 11px 15px; border-radius: 16px; font-size: 15px; line-height: 1.55; word-break: break-word; white-space: pre-wrap; }
+    .msg.user .bubble { background: var(--surface2); border-radius: 16px 16px 4px 16px; }
+    .msg.mint .bubble { background: var(--surface); border-left: 2px solid var(--mint); border-radius: 16px 16px 16px 4px; }
+    .msg-time { font-size: 11px; color: var(--muted); margin-top: 4px; padding: 0 4px; }
+
+    #chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip {
+      background: transparent; border: 1px solid rgba(152,232,193,0.3); color: var(--mint);
+      font-family: 'Inter', sans-serif; font-size: 13px; padding: 7px 14px; border-radius: 20px;
+      cursor: pointer; transition: all 0.2s; white-space: nowrap;
+    }
+    .chip:hover, .chip:active { background: var(--mint-dim); border-color: var(--mint); }
+
+    #typing { display: none; align-self: flex-start; background: var(--surface);
+      border-left: 2px solid var(--mint); border-radius: 16px 16px 16px 4px;
+      padding: 13px 18px; gap: 5px; align-items: center; }
+    #typing.on { display: flex; }
+    .dot { width: 7px; height: 7px; background: var(--mint); border-radius: 50%;
+      opacity: 0.6; animation: bounce 1.2s infinite ease-in-out; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      0%,60%,100% { transform: translateY(0); opacity: 0.6; }
+      30% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    #bar {
+      display: flex; align-items: flex-end; gap: 10px;
+      padding: 12px 16px; padding-bottom: calc(12px + var(--safe-bottom));
+      background: rgba(10,10,10,0.97); backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border); flex-shrink: 0;
+    }
+    #inp {
+      flex: 1; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 22px; padding: 11px 16px; color: var(--text);
+      font-family: 'Inter', sans-serif; font-size: 15px; resize: none; outline: none;
+      max-height: 120px; line-height: 1.4; transition: border-color 0.2s;
+    }
+    #inp::placeholder { color: var(--muted); }
+    #inp:focus { border-color: rgba(152,232,193,0.3); }
+    #send {
+      width: 42px; height: 42px; border-radius: 50%; background: var(--mint);
+      border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: transform 0.15s, opacity 0.15s;
+    }
+    #send:hover { transform: scale(1.05); }
+    #send:active { transform: scale(0.95); }
+    #send:disabled { opacity: 0.4; cursor: default; transform: none; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <svg class="hdr-avatar" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="60,10 104,32 104,78 60,100 16,78 16,32" fill="none" stroke="#98E8C1" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="60,25 88,40 88,72 60,87 32,72 32,40" fill="rgba(152,232,193,0.04)" stroke="#98E8C1" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
+      <circle cx="47" cy="52" r="4" fill="#98E8C1"/>
+      <circle cx="73" cy="52" r="4" fill="#98E8C1"/>
+      <path d="M52,65 Q60,72 68,65" fill="none" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="60" y1="10" x2="60" y2="2" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="60" cy="1" r="2.5" fill="#98E8C1" opacity="0.6"/>
+    </svg>
+    <span class="hdr-title">Mint</span>
+    <span class="beta">beta</span>
+    <div class="hdr-status"><div class="sdot"></div><span>online</span></div>
+  </header>
+
+  <div id="chat"></div>
+
+  <div id="bar">
+    <textarea id="inp" placeholder="Message Mint…" rows="1"></textarea>
+    <button id="send" title="Send">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div id="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+
+<script>
+const chat = document.getElementById('chat');
+const inp = document.getElementById('inp');
+const send = document.getElementById('send');
+const typing = document.getElementById('typing');
+let history = [], busy = false;
+
+function ts() { return new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}); }
+function scrollEnd() { setTimeout(() => chat.scrollTo({top:chat.scrollHeight,behavior:'smooth'}), 60); }
+
+function addMsg(text, role) {
+  const w = document.createElement('div'); w.className = `msg ${role}`;
+  const b = document.createElement('div'); b.className = 'bubble'; b.textContent = text;
+  const t = document.createElement('div'); t.className = 'msg-time'; t.textContent = ts();
+  w.appendChild(b); w.appendChild(t); chat.appendChild(w); scrollEnd(); return w;
+}
+
+function showTyping() { chat.appendChild(typing); typing.classList.add('on'); scrollEnd(); }
+function hideTyping() { typing.classList.remove('on'); if (typing.parentNode) typing.parentNode.removeChild(typing); }
+
+function showWelcome() {
+  const w = addMsg("Hey! I'm Mint 🌿 I can help you build and edit your website. What would you like to do?", 'mint');
+  const chips = document.createElement('div'); chips.id = 'chips';
+  ['Build my site','Edit my gallery','Update my bio','Change colors'].forEach(label => {
+    const c = document.createElement('button'); c.className = 'chip'; c.textContent = label;
+    c.onclick = () => { chips.remove(); doSend(label); }; chips.appendChild(c);
+  });
+  w.appendChild(chips); scrollEnd();
+}
+
+async function doSend(text) {
+  if (!text.trim() || busy) return;
+  busy = true; send.disabled = true;
+  addMsg(text, 'user');
+  history.push({role:'user', content:text});
+  showTyping();
+  try {
+    const r = await fetch('https://api.bayouwebstudio.com/api/mint/chat', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({message:text, context:'getminted', history})
+    });
+    hideTyping();
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const d = await r.json();
+    const reply = d.reply || d.message || d.response || 'Got it! Let me help you with that.';
+    addMsg(reply, 'mint');
+    history.push({role:'assistant', content:reply});
+  } catch(e) {
+    hideTyping();
+    addMsg("Hmm, I hit a snag. Try again in a moment? 🌿", 'mint');
+  }
+  busy = false; send.disabled = false;
+}
+
+inp.addEventListener('input', () => { inp.style.height='auto'; inp.style.height=Math.min(inp.scrollHeight,120)+'px'; });
+inp.addEventListener('keydown', e => {
+  if (e.key==='Enter' && !e.shiftKey) { e.preventDefault(); const t=inp.value.trim(); if(t){inp.value='';inp.style.height='auto';doSend(t);} }
+});
+send.addEventListener('click', () => { const t=inp.value.trim(); if(t){inp.value='';inp.style.height='auto';doSend(t);} });
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/app/sw.js',{scope:'/app/'}).catch(()=>{});
+showWelcome();
+</script>
+</body>
+</html>
