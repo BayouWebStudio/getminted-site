@@ -108,7 +108,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--mint:#98E8C1;--mint-dim:rgba(152,232,193,0.15);--gold:#C9A84C;--bg:#0a0a0a;--card:#111;--text:#e0e0e0;--text-dim:#888}
+:root{--mint:#98E8C1;--mint-dim:rgba(152,232,193,0.08);--mint-bright:#6dd5a0;--gold:#C9A84C;--bg:#0a0a0a;--bg-light:#0f0f0f;--card:#111;--card-hover:#1a1a1a;--text:#e0e0e0;--text-dim:#888;--text-bright:#f5f5f5;--border:rgba(152,232,193,0.1)}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 h1,h2,h3{font-family:'Playfair Display',serif;font-weight:800}
@@ -116,20 +116,23 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:800}
 a{color:var(--mint);text-decoration:none}
 
 /* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 24px 80px}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 24px 80px;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-light) 100%)}
 .hero::before{content:'';position:absolute;inset:0;background-image:
-  linear-gradient(rgba(152,232,193,0.03) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(152,232,193,0.03) 1px,transparent 1px);
-  background-size:60px 60px;pointer-events:none}
-.mint-char{width:150px;height:150px;margin-bottom:40px;animation:float 3s ease-in-out infinite}
+  linear-gradient(rgba(152,232,193,0.02) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(152,232,193,0.02) 1px,transparent 1px);
+  background-size:80px 80px;pointer-events:none;opacity:0.5}
+.hero::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(152,232,193,0.03) 0%,transparent 70%);pointer-events:none}
+.mint-char{width:160px;height:160px;margin-bottom:40px;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 8px 32px rgba(152,232,193,0.1));position:relative;z-index:2}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 .hero h1{font-size:clamp(3rem,8vw,5.5rem);background:linear-gradient(135deg,var(--mint),#6dd5a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;letter-spacing:-1px}
 .hero p{font-size:clamp(1.1rem,2.5vw,1.35rem);color:var(--text-dim);max-width:550px;margin-bottom:36px}
 .hero-subtext{font-size:1rem;color:var(--mint);margin-bottom:20px!important;font-weight:500}
-.btn{display:inline-block;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(152,232,193,0.2)}
-.btn-mint{background:var(--mint);color:#0a0a0a}
-.btn-gold{background:var(--gold);color:#0a0a0a}
+.btn{display:inline-block;padding:16px 32px;border-radius:12px;font-weight:600;font-size:1rem;transition:all .3s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border:none;text-decoration:none;position:relative;overflow:hidden}
+.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);transition:left .6s;z-index:1}
+.btn:hover::before{left:100%}
+.btn:hover{transform:translateY(-1px);box-shadow:0 12px 40px rgba(152,232,193,0.25)}
+.btn-mint{background:linear-gradient(135deg,var(--mint),var(--mint-bright));color:#0a0a0a}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#d4b55e);color:#0a0a0a}
 
 /* Sections */
 section{padding:100px 0}
@@ -149,8 +152,10 @@ section{padding:100px 0}
 
 /* Why Mint */
 .comparison-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-bottom:50px}
-.comparison-item{background:var(--card);padding:30px;border-radius:12px;border:2px solid transparent}
-.comparison-item.mint-advantage{border-color:var(--mint);background:var(--mint-dim)}
+.comparison-item{background:var(--card);padding:30px;border-radius:16px;border:1px solid var(--border);transition:all .3s ease;backdrop-filter:blur(10px)}
+.comparison-item:hover{background:var(--card-hover);border-color:rgba(152,232,193,0.2);transform:translateY(-2px)}
+.comparison-item.mint-advantage{border:2px solid var(--mint);background:linear-gradient(135deg,var(--mint-dim),rgba(152,232,193,0.04));position:relative}
+.comparison-item.mint-advantage::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(152,232,193,0.1),transparent);border-radius:16px;pointer-events:none}
 .comparison-item h3{margin-bottom:20px;font-size:18px}
 .comparison-item ul{list-style:none;padding:0}
 .comparison-item li{margin-bottom:10px;padding-left:20px;position:relative}
@@ -227,16 +232,62 @@ footer .links a:hover{color:var(--mint)}
 <!-- Hero -->
 <section class="hero">
   <div class="mint-char">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mint AI mascot - hexagonal character representing AI website builder">
-      <polygon points="60,10 104,32 104,78 60,100 16,78 16,32" fill="none" stroke="#98E8C1" stroke-width="2" stroke-linejoin="round"/>
-      <polygon points="60,25 88,40 88,72 60,87 32,72 32,40" fill="rgba(152,232,193,0.04)" stroke="#98E8C1" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
-      <circle cx="47" cy="52" r="4" fill="#98E8C1"/>
-      <circle cx="73" cy="52" r="4" fill="#98E8C1"/>
-      <path d="M52,65 Q60,72 68,65" fill="none" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="60" y1="10" x2="60" y2="2" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round"/>
-      <circle cx="60" cy="1" r="2.5" fill="#98E8C1" opacity="0.6"/>
-      <line x1="16" y1="55" x2="6" y2="48" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-      <line x1="104" y1="55" x2="114" y2="48" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mint AI - Modern hexagonal logo with geometric leaf design">
+      <defs>
+        <linearGradient id="mintGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#98E8C1;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#6dd5a0;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#7dd3a0;stop-opacity:0.9" />
+          <stop offset="100%" style="stop-color:#98E8C1;stop-opacity:0.6" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Main hexagon -->
+      <polygon points="60,8 100,28 100,72 60,92 20,72 20,28" 
+               fill="none" 
+               stroke="url(#mintGradient)" 
+               stroke-width="2.5" 
+               stroke-linejoin="round"/>
+      
+      <!-- Inner hexagon -->
+      <polygon points="60,20 85,35 85,65 60,80 35,65 35,35" 
+               fill="rgba(152,232,193,0.08)" 
+               stroke="url(#mintGradient)" 
+               stroke-width="1" 
+               stroke-linejoin="round" 
+               opacity="0.7"/>
+               
+      <!-- Geometric leaf design -->
+      <g transform="translate(60,50)">
+        <!-- Main leaf shape -->
+        <path d="M0,-15 C8,-12 12,-8 15,0 C12,8 8,12 0,15 C-8,12 -12,8 -15,0 C-12,-8 -8,-12 0,-15 Z" 
+              fill="url(#leafGradient)" 
+              opacity="0.8"/>
+        
+        <!-- Leaf veins -->
+        <path d="M0,-15 L0,15 M-8,-8 L8,8 M8,-8 L-8,8" 
+              stroke="#98E8C1" 
+              stroke-width="1" 
+              stroke-linecap="round" 
+              opacity="0.6"/>
+        
+        <!-- Center dot -->
+        <circle cx="0" cy="0" r="2" fill="#98E8C1" opacity="0.9"/>
+      </g>
+      
+      <!-- Corner accent dots -->
+      <circle cx="60" cy="8" r="2" fill="url(#mintGradient)" opacity="0.8"/>
+      <circle cx="100" cy="50" r="1.5" fill="url(#mintGradient)" opacity="0.6"/>
+      <circle cx="20" cy="50" r="1.5" fill="url(#mintGradient)" opacity="0.6"/>
+      
+      <!-- Subtle glow effect -->
+      <polygon points="60,8 100,28 100,72 60,92 20,72 20,28" 
+               fill="none" 
+               stroke="rgba(152,232,193,0.1)" 
+               stroke-width="8" 
+               stroke-linejoin="round"/>
     </svg>
   </div>
   <h1>AI Website Builder for Tattoo Artists & Small Business</h1>
