@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Minted — AI Builds Your Website</title>
-<meta name="description" content="Mint is an AI that builds and manages websites for small businesses. Custom .com, AI chatbot, instant edits — starting at $25/mo.">
-<meta name="keywords" content="AI website builder, small business website, tattoo artist website, barber website, salon website, photographer website">
+<title>Get Minted — AI Website Builder for Small Business | $25/mo</title>
+<meta name="description" content="AI builds custom websites for tattoo artists, barbers, salons & small businesses in 1 hour. Custom domain, AI chatbot, instant edits — $25/mo. No coding required.">
+<meta name="keywords" content="AI website builder, small business website, tattoo artist website, barber website, salon website, AI website design, custom website builder, website for tattoo artist, website for barber, automatic website builder, AI web design, small business web design">
 <meta property="og:title" content="Get Minted — AI Builds Your Website">
 <meta property="og:description" content="AI builds your website. AI runs your website. You just show up. Starting at $25/mo.">
 <meta property="og:type" content="website">
@@ -15,6 +15,94 @@
 <meta name="twitter:title" content="Get Minted — AI Builds Your Website">
 <meta name="twitter:description" content="AI builds your website. AI runs your website. You just show up.">
 <link rel="canonical" href="https://getminted.ai">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Get Minted",
+  "applicationCategory": "WebApplication",
+  "operatingSystem": "Any",
+  "description": "AI website builder that creates custom websites for small businesses in 1 hour. Features AI chatbot, instant editing, and professional design.",
+  "url": "https://getminted.ai",
+  "creator": {
+    "@type": "Organization",
+    "name": "Bayou Web Studio",
+    "url": "https://bayouwebstudio.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "25",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "RecurringCharge",
+      "frequency": "P1M"
+    },
+    "description": "Monthly subscription including custom domain, AI website builder, AI chatbot, and unlimited edits"
+  },
+  "featureList": [
+    "AI-built custom websites",
+    "Custom domain included",
+    "AI chatbot integration", 
+    "Voice-controlled editing",
+    "SEO optimization",
+    "Mobile responsive design",
+    "1-hour deployment"
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast do I get my website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 hour. Our AI builds your custom website automatically from your Instagram profile in just 1 hour."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Do I need to know code to use Get Minted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No coding required. You simply talk to Mint AI and it handles all the technical aspects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my own domain name?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can bring your existing domain or we'll help you get a new .com domain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make changes to my website?", 
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply open Mint and tell it what you want to change. Changes are made in seconds without any coding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a contract or commitment?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "No contract required. You can cancel your subscription anytime."
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -37,6 +125,7 @@ a{color:var(--mint);text-decoration:none}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 .hero h1{font-size:clamp(3rem,8vw,5.5rem);background:linear-gradient(135deg,var(--mint),#6dd5a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;letter-spacing:-1px}
 .hero p{font-size:clamp(1.1rem,2.5vw,1.35rem);color:var(--text-dim);max-width:550px;margin-bottom:36px}
+.hero-subtext{font-size:1rem;color:var(--mint);margin-bottom:20px!important;font-weight:500}
 .btn{display:inline-block;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(152,232,193,0.2)}
 .btn-mint{background:var(--mint);color:#0a0a0a}
@@ -102,7 +191,7 @@ footer .links a:hover{color:var(--mint)}
 <!-- Hero -->
 <section class="hero">
   <div class="mint-char">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mint AI mascot - hexagonal character representing AI website builder">
       <polygon points="60,10 104,32 104,78 60,100 16,78 16,32" fill="none" stroke="#98E8C1" stroke-width="2" stroke-linejoin="round"/>
       <polygon points="60,25 88,40 88,72 60,87 32,72 32,40" fill="rgba(152,232,193,0.04)" stroke="#98E8C1" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
       <circle cx="47" cy="52" r="4" fill="#98E8C1"/>
@@ -116,6 +205,7 @@ footer .links a:hover{color:var(--mint)}
   </div>
   <h1>Get Minted.</h1>
   <p>AI builds your website. AI runs your website. You just show up.</p>
+  <p class="hero-subtext">Perfect for tattoo artists, barbers, salons, and creative professionals</p>
   <a href="https://bayouwebstudio.com/for-tattoo-artists/#get-started" class="btn btn-gold">Get Started</a>
 </section>
 
@@ -148,7 +238,7 @@ footer .links a:hover{color:var(--mint)}
   <div class="container">
     <h2 class="section-title reveal">Everything You Need</h2>
     <div class="features-grid">
-      <div class="feature-card reveal"><h3>AI-Built Sites</h3><p>Not templates. Every site is custom-designed for your brand.</p></div>
+      <div class="feature-card reveal"><h3>AI-Built Custom Websites</h3><p>Not templates. Every site is custom-designed for your brand using advanced AI technology.</p></div>
       <div class="feature-card reveal"><h3>Your Own .com</h3><p>Pick your domain, we handle everything.</p></div>
       <div class="feature-card reveal"><h3>Mint Chatbot</h3><p>24/7 AI concierge on your site answers visitor questions.</p></div>
       <div class="feature-card reveal"><h3>Mint Editor</h3><p>Edit your site by talking. No code, no dashboards.</p></div>
