@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Minted — AI Builds Your Website</title>
+<meta name="description" content="Mint is an AI that builds and manages websites for small businesses. Custom .com, AI chatbot, instant edits — starting at $25/mo.">
+<meta name="keywords" content="AI website builder, small business website, tattoo artist website, barber website, salon website, photographer website">
+<meta property="og:title" content="Get Minted — AI Builds Your Website">
+<meta property="og:description" content="AI builds your website. AI runs your website. You just show up. Starting at $25/mo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getminted.ai">
+<meta property="og:image" content="https://getminted.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Get Minted — AI Builds Your Website">
+<meta name="twitter:description" content="AI builds your website. AI runs your website. You just show up.">
+<link rel="canonical" href="https://getminted.ai">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--mint:#98E8C1;--mint-dim:rgba(152,232,193,0.15);--gold:#C9A84C;--bg:#0a0a0a;--card:#111;--text:#e0e0e0;--text-dim:#888}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:800}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+a{color:var(--mint);text-decoration:none}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 24px 80px}
+.hero::before{content:'';position:absolute;inset:0;background-image:
+  linear-gradient(rgba(152,232,193,0.03) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(152,232,193,0.03) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none}
+.mint-char{width:150px;height:150px;margin-bottom:40px;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);background:linear-gradient(135deg,var(--mint),#6dd5a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;letter-spacing:-1px}
+.hero p{font-size:clamp(1.1rem,2.5vw,1.35rem);color:var(--text-dim);max-width:550px;margin-bottom:36px}
+.btn{display:inline-block;padding:16px 40px;border-radius:50px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(152,232,193,0.2)}
+.btn-mint{background:var(--mint);color:#0a0a0a}
+.btn-gold{background:var(--gold);color:#0a0a0a}
+
+/* Sections */
+section{padding:100px 0}
+.section-title{text-align:center;font-size:clamp(2rem,4vw,2.8rem);color:#fff;margin-bottom:60px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:none}
+
+/* How It Works */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.step{text-align:center;padding:40px 24px}
+.step-icon{font-size:3rem;margin-bottom:20px}
+.step h3{font-size:1.3rem;color:#fff;margin-bottom:12px;font-family:'Inter',sans-serif;font-weight:700}
+.step p{color:var(--text-dim);font-size:.95rem}
+
+/* Features */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.feature-card{background:var(--card);border:1px solid transparent;border-radius:12px;padding:32px 24px;transition:border-color .3s,transform .3s}
+.feature-card:hover{border-color:var(--mint);transform:translateY(-4px)}
+.feature-card h3{font-size:1.1rem;color:#fff;margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:700}
+.feature-card p{color:var(--text-dim);font-size:.9rem}
+
+/* Showcase */
+.showcase-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:40px}
+.showcase-card{background:var(--card);border-radius:12px;padding:40px 28px;text-align:center;border:1px solid #222;transition:border-color .3s}
+.showcase-card:hover{border-color:var(--mint)}
+.showcase-card h3{color:#fff;font-size:1.2rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:8px}
+.showcase-card p{color:var(--text-dim);font-size:.9rem}
+.showcase-card .domain{color:var(--mint);font-size:.85rem;margin-bottom:12px;font-family:monospace}
+.more-link{text-align:center;font-size:1.05rem}
+
+/* Pricing */
+.pricing-box{max-width:480px;margin:0 auto;background:var(--card);border:2px solid var(--mint);border-radius:16px;padding:48px 36px;text-align:center}
+.pricing-box .price{font-size:3.5rem;font-weight:800;color:#fff;font-family:'Playfair Display',serif}
+.pricing-box .price span{font-size:1.2rem;color:var(--text-dim);font-weight:400}
+.pricing-box .subtitle{color:var(--text-dim);margin-bottom:28px;font-size:1.05rem}
+.pricing-list{list-style:none;text-align:left;margin-bottom:36px}
+.pricing-list li{padding:8px 0;color:var(--text);font-size:.95rem;border-bottom:1px solid #1a1a1a}
+.pricing-list li::before{content:'✓ ';color:var(--mint);font-weight:700}
+
+/* FAQ */
+.faq-list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid #1a1a1a;padding:24px 0;cursor:pointer}
+.faq-q{font-weight:600;color:#fff;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.4rem;color:var(--mint);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{color:var(--text-dim);font-size:.95rem;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:100px;padding-top:12px}
+
+/* Footer */
+footer{text-align:center;padding:60px 24px;border-top:1px solid #1a1a1a;color:var(--text-dim);font-size:.85rem}
+footer .tagline{font-size:1.1rem;margin-bottom:16px;color:var(--text)}
+footer .links{margin-bottom:12px}
+footer .links a{margin:0 12px;color:var(--text-dim);transition:color .2s}
+footer .links a:hover{color:var(--mint)}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="mint-char">
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="60,10 104,32 104,78 60,100 16,78 16,32" fill="none" stroke="#98E8C1" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="60,25 88,40 88,72 60,87 32,72 32,40" fill="rgba(152,232,193,0.04)" stroke="#98E8C1" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
+      <circle cx="47" cy="52" r="4" fill="#98E8C1"/>
+      <circle cx="73" cy="52" r="4" fill="#98E8C1"/>
+      <path d="M52,65 Q60,72 68,65" fill="none" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="60" y1="10" x2="60" y2="2" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="60" cy="1" r="2.5" fill="#98E8C1" opacity="0.6"/>
+      <line x1="16" y1="55" x2="6" y2="48" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+      <line x1="104" y1="55" x2="114" y2="48" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    </svg>
+  </div>
+  <h1>Get Minted.</h1>
+  <p>AI builds your website. AI runs your website. You just show up.</p>
+  <a href="https://bayouwebstudio.com/for-tattoo-artists/#get-started" class="btn btn-gold">Get Started</a>
+</section>
+
+<!-- How It Works -->
+<section id="how-it-works">
+  <div class="container">
+    <h2 class="section-title reveal">How It Works</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-icon">📱</div>
+        <h3>Tell us your Instagram</h3>
+        <p>We pull your photos and style automatically. No uploading, no hassle.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-icon">🌿</div>
+        <h3>Mint builds your site</h3>
+        <p>Custom .com, gallery, booking, SEO — ready in 1 hour.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-icon">💬</div>
+        <h3>Talk to Mint anytime</h3>
+        <p>Change photos, update bio, edit anything — just ask Mint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features">
+  <div class="container">
+    <h2 class="section-title reveal">Everything You Need</h2>
+    <div class="features-grid">
+      <div class="feature-card reveal"><h3>AI-Built Sites</h3><p>Not templates. Every site is custom-designed for your brand.</p></div>
+      <div class="feature-card reveal"><h3>Your Own .com</h3><p>Pick your domain, we handle everything.</p></div>
+      <div class="feature-card reveal"><h3>Mint Chatbot</h3><p>24/7 AI concierge on your site answers visitor questions.</p></div>
+      <div class="feature-card reveal"><h3>Mint Editor</h3><p>Edit your site by talking. No code, no dashboards.</p></div>
+      <div class="feature-card reveal"><h3>Smart Gallery</h3><p>AI curates your best work. Masonry layout, lightbox, mobile-perfect.</p></div>
+      <div class="feature-card reveal"><h3>SEO Built In</h3><p>Google-optimized from day one. Schema, meta tags, speed.</p></div>
+      <div class="feature-card reveal"><h3>Booking Integration</h3><p>Connect your booking link, DMs, or email.</p></div>
+      <div class="feature-card reveal"><h3>Payment Ready</h3><p>Stripe, Square, or whatever you use — built in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Showcase -->
+<section id="showcase">
+  <div class="container">
+    <h2 class="section-title reveal">Freshly Minted Sites</h2>
+    <div class="showcase-grid">
+      <div class="showcase-card reveal">
+        <div class="domain">tattoosbypaketh.com</div>
+        <h3>Paketh</h3>
+        <p>101K followers, custom portfolio</p>
+      </div>
+      <div class="showcase-card reveal">
+        <div class="domain">tatsuink.com</div>
+        <h3>Tatsu Ink</h3>
+        <p>Anime tattoo specialist, 100/100 SEO</p>
+      </div>
+      <div class="showcase-card reveal">
+        <div class="domain">guccierrezz.com</div>
+        <h3>Guccierrezz</h3>
+        <p>Bold color artist, masonry gallery</p>
+      </div>
+    </div>
+    <p class="more-link reveal"><a href="https://bayouwebstudio.com">See more sites →</a></p>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="container">
+    <h2 class="section-title reveal">Simple Pricing</h2>
+    <div class="pricing-box reveal">
+      <div class="price">$25<span>/mo</span></div>
+      <p class="subtitle">Everything included. No surprises.</p>
+      <ul class="pricing-list">
+        <li>Custom .com domain</li>
+        <li>AI-built website</li>
+        <li>Mint chatbot on your site</li>
+        <li>Mint editor — change anything anytime</li>
+        <li>Unlimited photo uploads</li>
+        <li>SEO optimization</li>
+        <li>SSL / HTTPS</li>
+      </ul>
+      <a href="https://bayouwebstudio.com/for-tattoo-artists/#get-started" class="btn btn-gold">Get Minted</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title reveal">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal"><div class="faq-q">How fast do I get my site?</div><div class="faq-a">1 hour. Seriously.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">Do I need to know code?</div><div class="faq-a">No. You talk to Mint. Mint does the rest.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">Can I use my own domain?</div><div class="faq-a">Yes. Bring yours or we'll get you a new .com.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">What if I want to change something?</div><div class="faq-a">Open Mint, tell it what you want. Done in seconds.</div></div>
+      <div class="faq-item reveal"><div class="faq-q">Is there a contract?</div><div class="faq-a">No. Cancel anytime.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="tagline">Minted by Mint 🌿</div>
+  <div class="links">
+    <a href="https://bayouwebstudio.com">bayouwebstudio.com</a>
+    <a href="https://instagram.com/bayouwebstudio">Instagram</a>
+    <a href="mailto:hello@bayouwebstudio.com">Email</a>
+  </div>
+  <p>© 2026 Bayou Web Studio</p>
+</footer>
+
+<script>
+// Scroll reveal
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// FAQ toggle
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.addEventListener('click',()=>item.classList.toggle('open'));
+});
+</script>
+</body>
+</html>
