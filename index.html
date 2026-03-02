@@ -137,6 +137,42 @@ section{padding:100px 0}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
 .reveal.visible{opacity:1;transform:none}
 
+/* Get Started */
+.get-started-content{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1000px;margin:0 auto}
+.numbered-list{counter-reset:step-counter;padding:0;list-style:none}
+.numbered-list li{counter-increment:step-counter;margin-bottom:20px;padding-left:40px;position:relative}
+.numbered-list li::before{content:counter(step-counter);position:absolute;left:0;top:0;background:var(--mint);color:var(--bg);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.mint-form{display:flex;flex-direction:column;gap:16px;max-width:400px}
+.mint-form input,.mint-form select{padding:14px 16px;border:1px solid var(--text-dim);border-radius:8px;background:var(--card);color:var(--text);font-size:16px}
+.mint-form input:focus,.mint-form select:focus{outline:none;border-color:var(--mint)}
+.form-note{font-size:14px;color:var(--text-dim);margin-top:10px;text-align:center}
+
+/* Why Mint */
+.comparison-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-bottom:50px}
+.comparison-item{background:var(--card);padding:30px;border-radius:12px;border:2px solid transparent}
+.comparison-item.mint-advantage{border-color:var(--mint);background:var(--mint-dim)}
+.comparison-item h3{margin-bottom:20px;font-size:18px}
+.comparison-item ul{list-style:none;padding:0}
+.comparison-item li{margin-bottom:10px;padding-left:20px;position:relative}
+.comparison-item li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%}
+.comparison-item:not(.mint-advantage) li::before{background:#666}
+.mint-advantage li::before{background:var(--mint)}
+.why-content{max-width:800px;margin:0 auto}
+.why-content h3{color:var(--mint);margin:40px 0 20px;font-size:24px}
+.why-content p{margin-bottom:20px;line-height:1.7;font-size:17px}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.testimonial{background:var(--card);padding:30px;border-radius:12px;text-align:center}
+.stars{font-size:20px;margin-bottom:20px}
+.testimonial p{font-style:italic;margin-bottom:20px;font-size:16px;line-height:1.6}
+.author{color:var(--mint);font-weight:600;font-size:14px}
+
+@media (max-width: 768px) {
+  .get-started-content{grid-template-columns:1fr;gap:40px}
+  .comparison-grid{grid-template-columns:1fr;gap:20px}
+}
+
 /* How It Works */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
 .step{text-align:center;padding:40px 24px}
@@ -203,10 +239,10 @@ footer .links a:hover{color:var(--mint)}
       <line x1="104" y1="55" x2="114" y2="48" stroke="#98E8C1" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
     </svg>
   </div>
-  <h1>Get Minted.</h1>
+  <h1>AI Website Builder for Tattoo Artists & Small Business</h1>
   <p>AI builds your website. AI runs your website. You just show up.</p>
   <p class="hero-subtext">Perfect for tattoo artists, barbers, salons, and creative professionals</p>
-  <a href="https://bayouwebstudio.com/for-tattoo-artists/#get-started" class="btn btn-gold">Get Started</a>
+  <a href="#get-started" class="btn btn-gold">Get Started</a>
 </section>
 
 <!-- How It Works -->
@@ -291,13 +327,124 @@ footer .links a:hover{color:var(--mint)}
         <li>SEO optimization</li>
         <li>SSL / HTTPS</li>
       </ul>
-      <a href="https://bayouwebstudio.com/for-tattoo-artists/#get-started" class="btn btn-gold">Get Minted</a>
+      <a href="#get-started" class="btn btn-gold">Get Minted</a>
+    </div>
+  </div>
+</section>
+
+<!-- Get Started -->
+<section id="get-started">
+  <div class="container">
+    <h2 class="section-title reveal">Ready to Get Minted?</h2>
+    <div class="get-started-content reveal">
+      <div class="process-steps">
+        <h3>Here's how it works:</h3>
+        <ol class="numbered-list">
+          <li><strong>Share your Instagram:</strong> Just give us your handle (@yourbusiness)</li>
+          <li><strong>Mint builds your site:</strong> Our AI pulls your photos and creates a custom website in 1 hour</li>
+          <li><strong>Launch & edit:</strong> Your site goes live with a custom domain. Need changes? Just ask Mint!</li>
+        </ol>
+      </div>
+      
+      <div class="signup-form">
+        <h3>Start Your Website Today</h3>
+        <form action="https://formsubmit.co/hello@bayouwebstudio.com" method="POST" class="mint-form">
+          <input type="hidden" name="_subject" value="New GetMinted Signup">
+          <input type="hidden" name="_next" value="https://getminted.ai/thanks.html">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="text" name="instagram" placeholder="Your Instagram Handle (@username)" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <select name="business_type" required>
+            <option value="">What type of business?</option>
+            <option value="tattoo">Tattoo Artist</option>
+            <option value="barber">Barber Shop</option>
+            <option value="salon">Beauty Salon</option>
+            <option value="photographer">Photographer</option>
+            <option value="other">Other</option>
+          </select>
+          <button type="submit" class="btn btn-gold">Get My Website Built</button>
+        </form>
+        <p class="form-note">We'll email you a live demo of your website within 24 hours. No payment required upfront.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Mint -->
+<section id="why-mint">
+  <div class="container">
+    <h2 class="section-title reveal">Why Get Minted vs Other Website Builders?</h2>
+    <div class="comparison-grid">
+      <div class="comparison-item reveal">
+        <h3>🚫 Traditional Web Designers</h3>
+        <ul>
+          <li>$2,000-$5,000 upfront</li>
+          <li>2-6 weeks to build</li>
+          <li>No ongoing updates</li>
+          <li>Need to call them for changes</li>
+        </ul>
+      </div>
+      
+      <div class="comparison-item reveal mint-advantage">
+        <h3>✅ Get Minted AI</h3>
+        <ul>
+          <li>$25/month, no upfront cost</li>
+          <li>Ready in 1 hour</li>
+          <li>Unlimited updates included</li>
+          <li>Talk to Mint for instant changes</li>
+        </ul>
+      </div>
+      
+      <div class="comparison-item reveal">
+        <h3>⚠️ DIY Builders (Wix, Squarespace)</h3>
+        <ul>
+          <li>You do all the work</li>
+          <li>Templates look generic</li>
+          <li>Hours of learning required</li>
+          <li>No AI assistance</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="why-content reveal">
+      <h3>Perfect for Creative Professionals</h3>
+      <p>Get Minted was specifically designed for visual businesses like tattoo artists, barbers, photographers, and salons. Our AI understands how to showcase creative work, automatically organizing your Instagram posts into a professional portfolio that converts browsers into bookings.</p>
+      
+      <p>Unlike generic website builders, Mint knows your industry. It automatically adds the right calls-to-action, creates booking-focused layouts, and includes features that matter to creative businesses: image galleries that load fast, mobile-optimized designs (since most clients browse on phones), and SEO that helps local customers find you.</p>
+      
+      <h3>The Smart Way to Build Your Online Presence</h3>
+      <p>Your Instagram already shows your best work — why start from scratch? Mint takes your existing content and transforms it into a professional website that works 24/7 to grow your business. No more sending potential clients to "DM for pricing" or trying to explain your services in Instagram Stories that disappear.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <div class="container">
+    <h2 class="section-title reveal">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"I went from having no website to a professional site that gets me bookings every day. The AI even organized my tattoo photos better than I could have."</p>
+        <div class="author">— @tattoosbypaketh, 101K followers</div>
+      </div>
+      
+      <div class="testimonial reveal">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Mint made changes to my site faster than any web designer I've worked with. Just tell it what you want and it's done in seconds."</p>
+        <div class="author">— @tatsuink, Anime tattoo specialist</div>
+      </div>
+      
+      <div class="testimonial reveal">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Best investment for my business. The website pays for itself with just one new client per month."</p>
+        <div class="author">— @guccierrezz, Bold color artist</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq">
   <div class="container">
     <h2 class="section-title reveal">FAQ</h2>
     <div class="faq-list">
