@@ -1,0 +1,51 @@
+<html>
+<head><meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{width:6.25in;height:4.25in;font-family:'Inter',Arial,sans-serif;background:#fff;display:grid;grid-template-columns:1fr 1fr;}
+  .left{padding:0.35in 0.25in;display:flex;flex-direction:column;justify-content:space-between;border-right:1px dashed #ddd;}
+  .right{padding:0.35in 0.25in;display:flex;flex-direction:column;justify-content:space-between;}
+  h2{font-size:14px;font-weight:800;color:#111;margin-bottom:10px;}
+  .features{list-style:none;display:flex;flex-direction:column;gap:6px;}
+  .features li{font-size:9px;color:#444;display:flex;align-items:center;gap:5px;}
+  .check{color:#00c882;font-weight:800;font-size:11px;}
+  .upgrade{background:#f8f8f8;border:1px solid #eee;border-radius:6px;padding:8px 10px;font-size:8px;color:#666;margin-top:10px;}
+  .upgrade strong{color:#111;}
+  .from{font-size:7px;color:#999;line-height:1.4;}
+  .qr-section{text-align:center;}
+  .qr-label{font-size:9px;font-weight:600;color:#111;margin-bottom:4px;}
+  .qr-url{font-size:8px;color:#00c882;font-weight:700;margin-top:4px;}
+  .address-box{border:1px solid #ddd;border-radius:6px;padding:12px;margin-top:auto;}
+  .addr-label{font-size:7px;color:#999;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+  .addr-text{font-size:9px;color:#333;line-height:1.5;}
+</style></head>
+<body>
+  <div class="left">
+    <div>
+      <h2>Your website is free.<br>Keep it forever.</h2>
+      <ul class="features">
+        <li><span class="check">&#x2713;</span> Photo gallery from your Instagram</li>
+        <li><span class="check">&#x2713;</span> Professional bio &amp; booking section</li>
+        <li><span class="check">&#x2713;</span> Mobile-friendly design</li>
+        <li><span class="check">&#x2713;</span> Live right now &#8212; no setup needed</li>
+      </ul>
+      <div class="upgrade">
+        Want a custom <strong>.com domain</strong>, Google SEO,<br>
+        and a page editor? <strong>$25/mo</strong>
+      </div>
+    </div>
+    <div class="from">Get Minted<br>Houston, TX<br>getminted.ai</div>
+  </div>
+  <div class="right">
+    <div class="qr-section">
+      <div class="qr-label">Scan to see your site</div>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://getminted.ai/dapperhousebarber/" style="width:1.4in;height:1.4in;margin:0 auto 6px;display:block;">
+      <div class="qr-url">getminted.ai/dapperhousebarber</div>
+    </div>
+    <div class="address-box">
+      <div class="addr-label">To</div>
+      <div class="addr-text">Dapper House Barber Cass Corridor<br>115 W Warren Ave<br>Detroit, MI 48201</div>
+    </div>
+  </div>
+</body></html>
