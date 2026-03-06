@@ -2,533 +2,2092 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Minted — AI Website Builder for Small Business | $25/mo</title>
-<meta name="description" content="AI builds custom websites for tattoo artists, barbers, salons & small businesses in 1 hour. Custom domain, AI chatbot, instant edits — $25/mo. No coding required.">
-<meta name="keywords" content="AI website builder, small business website, tattoo artist website, barber website, salon website, AI website design, custom website builder, website for tattoo artist, website for barber, automatic website builder, AI web design, small business web design">
-<meta property="og:title" content="Get Minted — AI Builds Your Website">
-<meta property="og:description" content="AI builds your website. AI runs your website. You just show up. Starting at $25/mo.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://getminted.ai">
-<meta property="og:image" content="https://getminted.ai/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Get Minted — AI Builds Your Website">
-<meta name="twitter:description" content="AI builds your website. AI runs your website. You just show up.">
-<link rel="canonical" href="https://getminted.ai">
-
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Get Minted",
-  "applicationCategory": "WebApplication",
-  "operatingSystem": "Any",
-  "description": "AI website builder that creates custom websites for small businesses in 1 hour. Features AI chatbot, instant editing, and professional design.",
-  "url": "https://getminted.ai",
-  "creator": {
-    "@type": "Organization",
-    "name": "Bayou Web Studio",
-    "url": "https://bayouwebstudio.com"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "25",
-    "priceCurrency": "USD",
-    "priceSpecification": {
-      "@type": "RecurringCharge",
-      "frequency": "P1M"
-    },
-    "description": "Monthly subscription including custom domain, AI website builder, AI chatbot, and unlimited edits"
-  },
-  "featureList": [
-    "AI-built custom websites",
-    "Custom domain included",
-    "AI chatbot integration", 
-    "Voice-controlled editing",
-    "SEO optimization",
-    "Mobile responsive design",
-    "1-hour deployment"
-  ]
-}
-</script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How fast do I get my website?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "1 hour. Our AI builds your custom website automatically from your Instagram profile in just 1 hour."
-      }
-    },
-    {
-      "@type": "Question", 
-      "name": "Do I need to know code to use Get Minted?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No coding required. You simply talk to Mint AI and it handles all the technical aspects."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use my own domain name?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can bring your existing domain or we'll help you get a new .com domain."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I make changes to my website?", 
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simply open Mint and tell it what you want to change. Changes are made in seconds without any coding."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a contract or commitment?",
-      "acceptedAnswer": {
-        "@type": "Answer", 
-        "text": "No contract required. You can cancel your subscription anytime."
-      }
-    }
-  ]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>GetMinted</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--mint:#98E8C1;--mint-dim:rgba(152,232,193,0.08);--mint-bright:#6dd5a0;--gold:#C9A84C;--bg:#0a0a0a;--bg-light:#0f0f0f;--card:#111;--card-hover:#1a1a1a;--text:#e0e0e0;--text-dim:#888;--text-bright:#f5f5f5;--border:rgba(152,232,193,0.1)}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:800}
-.container{max-width:1100px;margin:0 auto;padding:0 24px}
-a{color:var(--mint);text-decoration:none}
-
-/* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:60px 24px 80px;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-light) 100%)}
-.hero::before{content:'';position:absolute;inset:0;background-image:
-  linear-gradient(rgba(152,232,193,0.02) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(152,232,193,0.02) 1px,transparent 1px);
-  background-size:80px 80px;pointer-events:none;opacity:0.5}
-.hero::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(152,232,193,0.03) 0%,transparent 70%);pointer-events:none}
-.mint-char{width:160px;height:160px;margin-bottom:40px;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 8px 32px rgba(152,232,193,0.1));position:relative;z-index:2}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.hero h1{font-size:clamp(3rem,8vw,5.5rem);background:linear-gradient(135deg,var(--mint),#6dd5a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;letter-spacing:-1px}
-.hero p{font-size:clamp(1.1rem,2.5vw,1.35rem);color:var(--text-dim);max-width:550px;margin-bottom:36px}
-.hero-subtext{font-size:1rem;color:var(--mint);margin-bottom:20px!important;font-weight:500}
-.btn{display:inline-block;padding:16px 32px;border-radius:12px;font-weight:600;font-size:1rem;transition:all .3s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border:none;text-decoration:none;position:relative;overflow:hidden}
-.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);transition:left .6s;z-index:1}
-.btn:hover::before{left:100%}
-.btn:hover{transform:translateY(-1px);box-shadow:0 12px 40px rgba(152,232,193,0.25)}
-.btn-mint{background:linear-gradient(135deg,var(--mint),var(--mint-bright));color:#0a0a0a}
-.btn-gold{background:linear-gradient(135deg,var(--gold),#d4b55e);color:#0a0a0a}
-
-/* Sections */
-section{padding:100px 0}
-.section-title{text-align:center;font-size:clamp(2rem,4vw,2.8rem);color:#fff;margin-bottom:60px}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
-.reveal.visible{opacity:1;transform:none}
-
-/* Get Started */
-.get-started-content{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1000px;margin:0 auto}
-.numbered-list{counter-reset:step-counter;padding:0;list-style:none}
-.numbered-list li{counter-increment:step-counter;margin-bottom:20px;padding-left:40px;position:relative}
-.numbered-list li::before{content:counter(step-counter);position:absolute;left:0;top:0;background:var(--mint);color:var(--bg);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
-.mint-form{display:flex;flex-direction:column;gap:16px;max-width:400px}
-.mint-form input,.mint-form select{padding:14px 16px;border:1px solid var(--text-dim);border-radius:8px;background:var(--card);color:var(--text);font-size:16px}
-.mint-form input:focus,.mint-form select:focus{outline:none;border-color:var(--mint)}
-.form-note{font-size:14px;color:var(--text-dim);margin-top:10px;text-align:center}
-
-/* Why Mint */
-.comparison-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-bottom:50px}
-.comparison-item{background:var(--card);padding:30px;border-radius:16px;border:1px solid var(--border);transition:all .3s ease;backdrop-filter:blur(10px)}
-.comparison-item:hover{background:var(--card-hover);border-color:rgba(152,232,193,0.2);transform:translateY(-2px)}
-.comparison-item.mint-advantage{border:2px solid var(--mint);background:linear-gradient(135deg,var(--mint-dim),rgba(152,232,193,0.04));position:relative}
-.comparison-item.mint-advantage::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(152,232,193,0.1),transparent);border-radius:16px;pointer-events:none}
-.comparison-item h3{margin-bottom:20px;font-size:18px}
-.comparison-item ul{list-style:none;padding:0}
-.comparison-item li{margin-bottom:10px;padding-left:20px;position:relative}
-.comparison-item li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%}
-.comparison-item:not(.mint-advantage) li::before{background:#666}
-.mint-advantage li::before{background:var(--mint)}
-.why-content{max-width:800px;margin:0 auto}
-.why-content h3{color:var(--mint);margin:40px 0 20px;font-size:24px}
-.why-content p{margin-bottom:20px;line-height:1.7;font-size:17px}
-
-/* Testimonials */
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
-.testimonial{background:var(--card);padding:30px;border-radius:12px;text-align:center}
-.stars{font-size:20px;margin-bottom:20px}
-.testimonial p{font-style:italic;margin-bottom:20px;font-size:16px;line-height:1.6}
-.author{color:var(--mint);font-weight:600;font-size:14px}
-
-@media (max-width: 768px) {
-  .get-started-content{grid-template-columns:1fr;gap:40px}
-  .comparison-grid{grid-template-columns:1fr;gap:20px}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: #1A1A2E;
+  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+  color: #F0F4F8;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* How It Works */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
-.step{text-align:center;padding:40px 24px}
-.step-icon{font-size:3rem;margin-bottom:20px}
-.step h3{font-size:1.3rem;color:#fff;margin-bottom:12px;font-family:'Inter',sans-serif;font-weight:700}
-.step p{color:var(--text-dim);font-size:.95rem}
+#app {
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-/* Features */
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.feature-card{background:var(--card);border:1px solid transparent;border-radius:12px;padding:32px 24px;transition:border-color .3s,transform .3s}
-.feature-card:hover{border-color:var(--mint);transform:translateY(-4px)}
-.feature-card h3{font-size:1.1rem;color:#fff;margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:700}
-.feature-card p{color:var(--text-dim);font-size:.9rem}
+/* Top bar */
+.top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: max(env(safe-area-inset-top, 16px), 16px);
+  padding: 12px 20px 0;
+  z-index: 10;
+}
 
-/* Showcase */
-.showcase-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:40px}
-.showcase-card{background:var(--card);border-radius:12px;padding:40px 28px;text-align:center;border:1px solid #222;transition:border-color .3s}
-.showcase-card:hover{border-color:var(--mint)}
-.showcase-card h3{color:#fff;font-size:1.2rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:8px}
-.showcase-card p{color:var(--text-dim);font-size:.9rem}
-.showcase-card .domain{color:var(--mint);font-size:.85rem;margin-bottom:12px;font-family:monospace}
-.more-link{text-align:center;font-size:1.05rem}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-/* Pricing */
-.pricing-box{max-width:480px;margin:0 auto;background:var(--card);border:2px solid var(--mint);border-radius:16px;padding:48px 36px;text-align:center}
-.pricing-box .price{font-size:3.5rem;font-weight:800;color:#fff;font-family:'Playfair Display',serif}
-.pricing-box .price span{font-size:1.2rem;color:var(--text-dim);font-weight:400}
-.pricing-box .subtitle{color:var(--text-dim);margin-bottom:28px;font-size:1.05rem}
-.pricing-list{list-style:none;text-align:left;margin-bottom:36px}
-.pricing-list li{padding:8px 0;color:var(--text);font-size:.95rem;border-bottom:1px solid #1a1a1a}
-.pricing-list li::before{content:'✓ ';color:var(--mint);font-weight:700}
+.login-btn {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  background: none;
+  border: none;
+  color: #00C882;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 6px 10px;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.login-btn:hover, .login-btn:active { opacity: 0.85; }
 
-/* FAQ */
-.faq-list{max-width:700px;margin:0 auto}
-.faq-item{border-bottom:1px solid #1a1a1a;padding:24px 0;cursor:pointer}
-.faq-q{font-weight:600;color:#fff;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center}
-.faq-q::after{content:'+';font-size:1.4rem;color:var(--mint);transition:transform .3s}
-.faq-item.open .faq-q::after{transform:rotate(45deg)}
-.faq-a{color:var(--text-dim);font-size:.95rem;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
-.faq-item.open .faq-a{max-height:100px;padding-top:12px}
+/* Character area */
+.character-zone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
 
-/* Footer */
-footer{text-align:center;padding:60px 24px;border-top:1px solid #1a1a1a;color:var(--text-dim);font-size:.85rem}
-footer .tagline{font-size:1.1rem;margin-bottom:16px;color:var(--text)}
-footer .links{margin-bottom:12px}
-footer .links a{margin:0 12px;color:var(--text-dim);transition:color .2s}
-footer .links a:hover{color:var(--mint)}
+/* Speech bubble */
+.speech-bubble {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 200, 130, 0.12);
+  border: 1px solid rgba(0, 200, 130, 0.25);
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #F0F4F8;
+  white-space: nowrap;
+  max-width: 90vw;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 20;
+  pointer-events: none;
+}
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 14px; height: 14px;
+  background: rgba(0, 200, 130, 0.12);
+  border-right: 1px solid rgba(0, 200, 130, 0.25);
+  border-bottom: 1px solid rgba(0, 200, 130, 0.25);
+}
+.speech-bubble.pop {
+  animation: bubblePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.speech-bubble.hidden { opacity: 0; pointer-events: none; }
+@keyframes bubblePop {
+  0% { transform: translateX(-50%) scale(0.7); opacity: 0; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+/* Thinking dots in speech bubble */
+.thinking-dots { display: inline-flex; gap: 4px; align-items: center; height: 20px; }
+.thinking-dots span {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #00C882;
+  opacity: 0.4;
+  animation: dotPulse 1.2s ease-in-out infinite;
+}
+.thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+.thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dotPulse {
+  0%, 60%, 100% { opacity: 0.3; transform: scale(0.8); }
+  30% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Stretch canvas overlay — ABOVE the blob wrapper */
+#stretch-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 16;
+}
+
+/* Mint wrapper */
+#mint-wrapper {
+  position: relative;
+  width: 180px; height: 180px;
+  cursor: grab;
+  z-index: 15;
+  will-change: transform;
+  flex-shrink: 0;
+}
+#mint-wrapper:active { cursor: grabbing; }
+
+/* Blob body — NO CSS animations, all driven by JS springs */
+.mint-blob {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  will-change: transform;
+}
+
+.mint-blob-body {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 35% 30%, #4DFFC0 0%, #00C882 40%, #008A5A 100%);
+  box-shadow:
+    inset 0 -8px 20px rgba(0, 80, 50, 0.3),
+    inset 0 8px 20px rgba(77, 255, 192, 0.2),
+    0 8px 40px rgba(0, 200, 130, 0.25),
+    0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  will-change: border-radius, opacity;
+  transition: opacity 0.15s ease;
+}
+
+/* Inner glow / highlight */
+.mint-blob-body::before {
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: 18%;
+  width: 40%;
+  height: 30%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.25) 0%, transparent 70%);
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.mint-blob-body::after {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  right: 15%;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(0,138,90,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Shadow underneath */
+.mint-shadow {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: -1;
+  will-change: transform, opacity;
+}
+
+/* Face container — positioned absolutely over blob center, above stretch canvas */
+.mint-face {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+  z-index: 18;
+  will-change: transform;
+}
+
+.mint-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,200,130,0.15) 0%, transparent 70%);
+  filter: blur(25px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Chat section */
+/* IG Primary Input */
+.ig-section {
+  width: 100%;
+  max-width: 420px;
+  padding: 0 20px;
+  padding-bottom: max(env(safe-area-inset-bottom, 20px), 20px);
+  flex-shrink: 0;
+  z-index: 10;
+}
+.ig-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e8edf2;
+  margin-bottom: 12px;
+}
+.ig-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.ig-input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(152,232,193,0.3);
+  border-radius: 12px;
+  padding: 0 14px;
+  gap: 6px;
+  transition: border-color 0.2s;
+}
+.ig-input-wrap:focus-within { border-color: #00C882; }
+.ig-at { color: #00C882; font-weight: 700; font-size: 1.1rem; }
+.ig-input-wrap input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e8edf2;
+  font-size: 1rem;
+  padding: 14px 0;
+  width: 100%;
+  font-family: inherit;
+}
+.ig-input-wrap input::placeholder { color: #4a5a68; }
+.ig-build-btn {
+  background: #00C882;
+  color: #1A1A2E;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.1s;
+  font-family: inherit;
+}
+.ig-build-btn:active { transform: scale(0.96); opacity: 0.85; }
+
+/* Mint Chat Popup */
+.mint-chat-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 480px;
+  max-height: 42vh;
+  margin: 0 auto;
+  background: #111417;
+  border-top: 1px solid rgba(152,232,193,0.2);
+  border-radius: 20px 20px 0 0;
+  padding: 0 0 max(env(safe-area-inset-bottom,12px),12px);
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+}
+.mint-chat-popup.open { transform: translateY(0); }
+.mint-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.chat-close-btn {
+  background: none;
+  border: none;
+  color: #4a5a68;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.chat-section {
+  width: 100%;
+  max-width: 420px;
+  padding: 0 16px;
+  padding-bottom: max(env(safe-area-inset-bottom, 12px), 12px);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 8px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.chat-history::-webkit-scrollbar { display: none; }
+
+.chat-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  animation: msgSlideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes msgSlideIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.chat-msg.mint { justify-content: flex-start; }
+.chat-msg.user { justify-content: flex-end; }
+
+.chat-msg .leaf-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(0,200,130,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.chat-msg .bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.chat-msg.mint .bubble {
+  background: #252540;
+  color: #F0F4F8;
+  border-bottom-left-radius: 6px;
+}
+.chat-msg.user .bubble {
+  background: #00C882;
+  color: #1A1A2E;
+  border-bottom-right-radius: 6px;
+  font-weight: 500;
+}
+
+.chat-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.chat-input-bar input {
+  flex: 1;
+  padding: 14px 18px;
+  background: #111417;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  color: #F0F4F8;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.chat-input-bar input::placeholder { color: #555e68; }
+.chat-input-bar input:focus {
+  border-color: #00C882;
+  box-shadow: 0 0 0 3px rgba(0, 200, 130, 0.12);
+}
+
+.send-btn {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: #00C882;
+  border: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.15s, background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.send-btn:active { transform: scale(0.9); background: #00b374; }
+.send-btn:disabled { opacity: 0.4; cursor: default; }
+.send-btn:disabled:active { transform: none; }
+.send-btn svg { width: 20px; height: 20px; }
+
+.disclaimer {
+  font-size: 12px;
+  color: #8A9AA8;
+  text-align: center;
+  margin-top: 8px;
+  letter-spacing: 0.2px;
+}
+
+/* Particles */
+.particle {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #00C882;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 5;
+}
+
+/* Touch ripple */
+.touch-ripple {
+  position: fixed;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 50;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.6;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease-out;
+}
+.touch-ripple.expand {
+  transform: translate(-50%, -50%) scale(4);
+  opacity: 0;
+}
+
+/* Blob arms for face-cover reaction */
+.mint-arm {
+  position: absolute;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 35% 30%, #4DFFC0 0%, #00C882 50%, #008A5A 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 3;
+  top: 40%;
+  opacity: 0;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+  pointer-events: none;
+}
+.mint-arm.left-arm {
+  left: -10px;
+  transform: translateX(-20px) scale(0.5);
+}
+.mint-arm.right-arm {
+  right: -10px;
+  transform: translateX(20px) scale(0.5);
+}
+.mint-arm.left-arm.covering {
+  opacity: 1;
+  transform: translateX(30px) scale(1);
+}
+.mint-arm.right-arm.covering {
+  opacity: 1;
+  transform: translateX(-30px) scale(1);
+}
 </style>
 </head>
 <body>
+<div id="app">
+  <div class="top-bar">
+    <div class="wordmark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" style="flex-shrink:0;">
+        <defs>
+          <radialGradient id="logo-grad" cx="35%" cy="30%" r="65%">
+            <stop offset="0%" stop-color="#4DFFC0"/>
+            <stop offset="40%" stop-color="#00C882"/>
+            <stop offset="100%" stop-color="#008A5A"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="24" cy="25" rx="22" ry="21" fill="rgba(0,200,130,0.15)"/>
+        <path d="M24,4 C34,3 44,11 44,23 C44,37 36,44 24,44 C12,44 4,37 4,23 C4,11 14,5 24,4 Z" fill="url(#logo-grad)" style="filter:drop-shadow(0 3px 12px rgba(0,200,130,0.45))"/>
+        <ellipse cx="17" cy="15" rx="6" ry="4.5" fill="rgba(255,255,255,0.22)" transform="rotate(-15 17 15)"/>
+        <ellipse cx="17" cy="22" rx="5" ry="5.5" fill="white"/>
+        <ellipse cx="17" cy="22.5" rx="2.5" ry="2.9" fill="#1A1A2E"/>
+        <circle cx="18.5" cy="20.5" r="1.1" fill="rgba(255,255,255,0.9)"/>
+        <ellipse cx="31" cy="22" rx="5" ry="5.5" fill="white"/>
+        <ellipse cx="31" cy="22.5" rx="2.5" ry="2.9" fill="#1A1A2E"/>
+        <circle cx="32.5" cy="20.5" r="1.1" fill="rgba(255,255,255,0.9)"/>
+        <ellipse cx="10" cy="28" rx="3.5" ry="2" fill="rgba(255,130,160,0.25)"/>
+        <ellipse cx="38" cy="28" rx="3.5" ry="2" fill="rgba(255,130,160,0.25)"/>
+        <path d="M19,31 Q24,37 29,31" stroke="#006040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span style="font-family:'Inter',system-ui,sans-serif;font-size:17px;font-weight:700;color:white;letter-spacing:-0.5px;">get<span style="color:#00C882;">minted</span></span>
+    </div>
+    <button class="login-btn" onclick="window.location.href='https://getminted.ai/dashboard/'">Log in</button>
+  </div>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="mint-char">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mint AI - Modern hexagonal logo with geometric leaf design">
-      <defs>
-        <linearGradient id="mintGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#98E8C1;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#6dd5a0;stop-opacity:1" />
-        </linearGradient>
-        <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#7dd3a0;stop-opacity:0.9" />
-          <stop offset="100%" style="stop-color:#98E8C1;stop-opacity:0.6" />
-        </linearGradient>
-      </defs>
-      
-      <!-- Main hexagon -->
-      <polygon points="60,8 100,28 100,72 60,92 20,72 20,28" 
-               fill="none" 
-               stroke="url(#mintGradient)" 
-               stroke-width="2.5" 
-               stroke-linejoin="round"/>
-      
-      <!-- Inner hexagon -->
-      <polygon points="60,20 85,35 85,65 60,80 35,65 35,35" 
-               fill="rgba(152,232,193,0.08)" 
-               stroke="url(#mintGradient)" 
-               stroke-width="1" 
-               stroke-linejoin="round" 
-               opacity="0.7"/>
-               
-      <!-- Geometric leaf design -->
-      <g transform="translate(60,50)">
-        <!-- Main leaf shape -->
-        <path d="M0,-15 C8,-12 12,-8 15,0 C12,8 8,12 0,15 C-8,12 -12,8 -15,0 C-12,-8 -8,-12 0,-15 Z" 
-              fill="url(#leafGradient)" 
-              opacity="0.8"/>
-        
-        <!-- Leaf veins -->
-        <path d="M0,-15 L0,15 M-8,-8 L8,8 M8,-8 L-8,8" 
-              stroke="#98E8C1" 
-              stroke-width="1" 
-              stroke-linecap="round" 
-              opacity="0.6"/>
-        
-        <!-- Center dot -->
-        <circle cx="0" cy="0" r="2" fill="#98E8C1" opacity="0.9"/>
-      </g>
-      
-      <!-- Corner accent dots -->
-      <circle cx="60" cy="8" r="2" fill="url(#mintGradient)" opacity="0.8"/>
-      <circle cx="100" cy="50" r="1.5" fill="url(#mintGradient)" opacity="0.6"/>
-      <circle cx="20" cy="50" r="1.5" fill="url(#mintGradient)" opacity="0.6"/>
-      
-      <!-- Subtle glow effect -->
-      <polygon points="60,8 100,28 100,72 60,92 20,72 20,28" 
-               fill="none" 
-               stroke="rgba(152,232,193,0.1)" 
-               stroke-width="8" 
-               stroke-linejoin="round"/>
+  <!-- PRIMARY: IG handle input — always visible at top, chat can never cover it -->
+  <div class="ig-section" style="padding-top:12px;padding-bottom:8px;">
+    <p style="text-align:center;font-size:0.95rem;color:rgba(255,255,255,0.5);margin-bottom:8px;">Free website for <span id="app-typed" style="color:#00C882;border-right:2px solid #00C882;padding-right:3px;font-weight:600;"></span></p>
+    <script>
+    (function(){
+      const w=['Tattoo Artists.','Barbers.','Nail Techs.','Photographers.','Stylists.','Piercers.','Lash Techs.','Creatives.'];
+      let wi=0,ci=0,del=false;
+      const el=document.getElementById('app-typed');
+      function tick(){
+        const word=w[wi];
+        if(!del){el.textContent=word.slice(0,++ci);if(ci===word.length){del=true;setTimeout(tick,1800);return;}setTimeout(tick,80);}
+        else{el.textContent=word.slice(0,--ci);if(ci===0){del=false;wi=(wi+1)%w.length;setTimeout(tick,300);return;}setTimeout(tick,40);}
+      }
+      tick();
+    })();
+    </script>
+    <div class="ig-input-row">
+      <div class="ig-input-wrap">
+        <span class="ig-at">@</span>
+        <input type="text" id="ig-input" placeholder="yourhandle" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      </div>
+      <button class="ig-build-btn" id="ig-build-btn" onclick="igSubmit()">Build My Site →</button>
+    </div>
+    <p class="disclaimer" style="margin-top:6px;text-align:center;font-size:0.78rem;">Free forever · No credit card · 30 seconds</p>
+  </div>
+
+  <div class="character-zone" id="character-zone">
+    <canvas id="stretch-canvas"></canvas>
+    <div class="speech-bubble pop" id="speech-bubble">Hey! I'm Mint 🤙 Talk to me!</div>
+    <div id="mint-wrapper">
+      <div class="mint-glow"></div>
+      <div class="mint-shadow" id="mint-shadow"></div>
+      <div class="mint-blob" id="mint-blob">
+        <div class="mint-blob-body" id="mint-blob-body"></div>
+        <div class="mint-arm left-arm" id="arm-left"></div>
+        <div class="mint-arm right-arm" id="arm-right"></div>
+      </div>
+    </div>
+    <!-- Face SVG is OUTSIDE wrapper so it can be above stretch canvas -->
+    <svg class="mint-face" id="mint-face" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Eyebrows -->
+          <path id="brow-left" d="M52,62 Q62,56 72,60" stroke="rgba(0,60,35,0.5)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path id="brow-right" d="M108,60 Q118,56 128,62" stroke="rgba(0,60,35,0.5)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Left eye -->
+          <g id="eye-left-group">
+            <ellipse id="eye-left-white" cx="66" cy="78" rx="16" ry="18" fill="white"/>
+            <ellipse id="eye-left-pupil" cx="66" cy="78" rx="8" ry="9" fill="#1A1A2E"/>
+            <circle id="eye-left-highlight" cx="70" cy="73" r="3.5" fill="rgba(255,255,255,0.85)"/>
+            <ellipse id="eye-left-lid" cx="66" cy="78" rx="17" ry="0" fill="#00C882" opacity="0"/>
+          </g>
+
+          <!-- Right eye -->
+          <g id="eye-right-group">
+            <ellipse id="eye-right-white" cx="114" cy="78" rx="16" ry="18" fill="white"/>
+            <ellipse id="eye-right-pupil" cx="114" cy="78" rx="8" ry="9" fill="#1A1A2E"/>
+            <circle id="eye-right-highlight" cx="118" cy="73" r="3.5" fill="rgba(255,255,255,0.85)"/>
+            <ellipse id="eye-right-lid" cx="114" cy="78" rx="17" ry="0" fill="#00C882" opacity="0"/>
+          </g>
+
+          <!-- Sparkle highlights -->
+          <g id="sparkles" opacity="0">
+            <polygon points="55,65 56,62 57,65 60,66 57,67 56,70 55,67 52,66" fill="white" opacity="0.9"/>
+            <polygon points="123,65 124,62 125,65 128,66 125,67 124,70 123,67 120,66" fill="white" opacity="0.9"/>
+          </g>
+
+          <!-- Cheek blush -->
+          <ellipse cx="44" cy="95" rx="12" ry="7" fill="rgba(255,130,160,0.2)"/>
+          <ellipse cx="136" cy="95" rx="12" ry="7" fill="rgba(255,130,160,0.2)"/>
+
+          <!-- Mouth -->
+          <path id="mouth" d="M76,110 Q90,122 104,110" stroke="#006040" stroke-width="3" fill="none" stroke-linecap="round"/>
     </svg>
   </div>
-  <h1>AI Website Builder for Tattoo Artists & Small Business</h1>
-  <p>AI builds your website. AI runs your website. You just show up.</p>
-  <p class="hero-subtext">Perfect for tattoo artists, barbers, salons, and creative professionals</p>
-  <a href="#get-started" class="btn btn-gold">Get Started</a>
-</section>
 
-<!-- How It Works -->
-<section id="how-it-works">
-  <div class="container">
-    <h2 class="section-title reveal">How It Works</h2>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-icon">📱</div>
-        <h3>Tell us your Instagram</h3>
-        <p>We pull your photos and style automatically. No uploading, no hassle.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-icon">🌿</div>
-        <h3>Mint builds your site</h3>
-        <p>Custom .com, gallery, booking, SEO — ready in 1 hour.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-icon">💬</div>
-        <h3>Talk to Mint anytime</h3>
-        <p>Change photos, update bio, edit anything — just ask Mint.</p>
-      </div>
+
+
+  <!-- SECONDARY: Mint chat popup (slides up after 3s) -->
+  <div class="mint-chat-popup" id="mint-chat-popup">
+    <div class="mint-chat-header">
+      <span style="display:flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:600;color:#98E8C1;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20" style="flex-shrink:0;">
+          <defs><radialGradient id="chat-grad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#4DFFC0"/><stop offset="40%" stop-color="#00C882"/><stop offset="100%" stop-color="#008A5A"/></radialGradient></defs>
+          <path d="M24,4 C34,3 44,11 44,23 C44,37 36,44 24,44 C12,44 4,37 4,23 C4,11 14,5 24,4 Z" fill="url(#chat-grad)"/>
+          <ellipse cx="17" cy="22" rx="5" ry="5.5" fill="white"/><ellipse cx="17" cy="22.5" rx="2.5" ry="2.9" fill="#1A1A2E"/><circle cx="18.5" cy="20.5" r="1.1" fill="rgba(255,255,255,0.9)"/>
+          <ellipse cx="31" cy="22" rx="5" ry="5.5" fill="white"/><ellipse cx="31" cy="22.5" rx="2.5" ry="2.9" fill="#1A1A2E"/><circle cx="32.5" cy="20.5" r="1.1" fill="rgba(255,255,255,0.9)"/>
+          <path d="M19,31 Q24,37 29,31" stroke="#006040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        </svg>
+        Mint
+      </span>
+      <button class="chat-close-btn" onclick="closeMintChat()">✕</button>
+    </div>
+    <div class="chat-history" id="chat-history"></div>
+    <div class="chat-input-bar">
+      <input type="text" id="chat-input" placeholder="Chat with Mint..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <button class="send-btn" id="send-btn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12L3 3l19 9-19 9 2-9zm0 0h8" stroke="#1A1A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </div>
-</section>
-
-<!-- Features -->
-<section id="features">
-  <div class="container">
-    <h2 class="section-title reveal">Everything You Need</h2>
-    <div class="features-grid">
-      <div class="feature-card reveal"><h3>AI-Built Custom Websites</h3><p>Not templates. Every site is custom-designed for your brand using advanced AI technology.</p></div>
-      <div class="feature-card reveal"><h3>Your Own .com</h3><p>Pick your domain, we handle everything.</p></div>
-      <div class="feature-card reveal"><h3>Mint Chatbot</h3><p>24/7 AI concierge on your site answers visitor questions.</p></div>
-      <div class="feature-card reveal"><h3>Mint Editor</h3><p>Edit your site by talking. No code, no dashboards.</p></div>
-      <div class="feature-card reveal"><h3>Smart Gallery</h3><p>AI curates your best work. Masonry layout, lightbox, mobile-perfect.</p></div>
-      <div class="feature-card reveal"><h3>SEO Built In</h3><p>Google-optimized from day one. Schema, meta tags, speed.</p></div>
-      <div class="feature-card reveal"><h3>Booking Integration</h3><p>Connect your booking link, DMs, or email.</p></div>
-      <div class="feature-card reveal"><h3>Payment Ready</h3><p>Stripe, Square, or whatever you use — built in.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Showcase -->
-<section id="showcase">
-  <div class="container">
-    <h2 class="section-title reveal">Freshly Minted Sites</h2>
-    <div class="showcase-grid">
-      <div class="showcase-card reveal">
-        <div class="domain">tattoosbypaketh.com</div>
-        <h3>Paketh</h3>
-        <p>101K followers, custom portfolio</p>
-      </div>
-      <div class="showcase-card reveal">
-        <div class="domain">tatsuink.com</div>
-        <h3>Tatsu Ink</h3>
-        <p>Anime tattoo specialist, 100/100 SEO</p>
-      </div>
-      <div class="showcase-card reveal">
-        <div class="domain">guccierrezz.com</div>
-        <h3>Guccierrezz</h3>
-        <p>Bold color artist, masonry gallery</p>
-      </div>
-    </div>
-    <p class="more-link reveal"><a href="https://bayouwebstudio.com">See more sites →</a></p>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section id="pricing">
-  <div class="container">
-    <h2 class="section-title reveal">Simple Pricing</h2>
-    <div class="pricing-box reveal">
-      <div class="price">$25<span>/mo</span></div>
-      <p class="subtitle">Everything included. No surprises.</p>
-      <ul class="pricing-list">
-        <li>Custom .com domain</li>
-        <li>AI-built website</li>
-        <li>Mint chatbot on your site</li>
-        <li>Mint editor — change anything anytime</li>
-        <li>Unlimited photo uploads</li>
-        <li>SEO optimization</li>
-        <li>SSL / HTTPS</li>
-      </ul>
-      <a href="#get-started" class="btn btn-gold">Get Minted</a>
-    </div>
-  </div>
-</section>
-
-<!-- Get Started -->
-<section id="get-started">
-  <div class="container">
-    <h2 class="section-title reveal">Ready to Get Minted?</h2>
-    <div class="get-started-content reveal">
-      <div class="process-steps">
-        <h3>Here's how it works:</h3>
-        <ol class="numbered-list">
-          <li><strong>Share your Instagram:</strong> Just give us your handle (@yourbusiness)</li>
-          <li><strong>Mint builds your site:</strong> Our AI pulls your photos and creates a custom website in 1 hour</li>
-          <li><strong>Launch & edit:</strong> Your site goes live with a custom domain. Need changes? Just ask Mint!</li>
-        </ol>
-      </div>
-      
-      <div class="signup-form">
-        <h3>Start Your Website Today</h3>
-        <form action="https://formsubmit.co/hello@bayouwebstudio.com" method="POST" class="mint-form">
-          <input type="hidden" name="_subject" value="New GetMinted Signup">
-          <input type="hidden" name="_next" value="https://getminted.ai/thanks.html">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="text" name="instagram" placeholder="Your Instagram Handle (@username)" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <select name="business_type" required>
-            <option value="">What type of business?</option>
-            <option value="tattoo">Tattoo Artist</option>
-            <option value="barber">Barber Shop</option>
-            <option value="salon">Beauty Salon</option>
-            <option value="photographer">Photographer</option>
-            <option value="other">Other</option>
-          </select>
-          <button type="submit" class="btn btn-gold">Get My Website Built</button>
-        </form>
-        <p class="form-note">We'll email you a live demo of your website within 24 hours. No payment required upfront.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Why Choose Mint -->
-<section id="why-mint">
-  <div class="container">
-    <h2 class="section-title reveal">Why Get Minted vs Other Website Builders?</h2>
-    <div class="comparison-grid">
-      <div class="comparison-item reveal">
-        <h3>🚫 Traditional Web Designers</h3>
-        <ul>
-          <li>$2,000-$5,000 upfront</li>
-          <li>2-6 weeks to build</li>
-          <li>No ongoing updates</li>
-          <li>Need to call them for changes</li>
-        </ul>
-      </div>
-      
-      <div class="comparison-item reveal mint-advantage">
-        <h3>✅ Get Minted AI</h3>
-        <ul>
-          <li>$25/month, no upfront cost</li>
-          <li>Ready in 1 hour</li>
-          <li>Unlimited updates included</li>
-          <li>Talk to Mint for instant changes</li>
-        </ul>
-      </div>
-      
-      <div class="comparison-item reveal">
-        <h3>⚠️ DIY Builders (Wix, Squarespace)</h3>
-        <ul>
-          <li>You do all the work</li>
-          <li>Templates look generic</li>
-          <li>Hours of learning required</li>
-          <li>No AI assistance</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="why-content reveal">
-      <h3>Perfect for Creative Professionals</h3>
-      <p>Get Minted was specifically designed for visual businesses like tattoo artists, barbers, photographers, and salons. Our AI understands how to showcase creative work, automatically organizing your Instagram posts into a professional portfolio that converts browsers into bookings.</p>
-      
-      <p>Unlike generic website builders, Mint knows your industry. It automatically adds the right calls-to-action, creates booking-focused layouts, and includes features that matter to creative businesses: image galleries that load fast, mobile-optimized designs (since most clients browse on phones), and SEO that helps local customers find you.</p>
-      
-      <h3>The Smart Way to Build Your Online Presence</h3>
-      <p>Your Instagram already shows your best work — why start from scratch? Mint takes your existing content and transforms it into a professional website that works 24/7 to grow your business. No more sending potential clients to "DM for pricing" or trying to explain your services in Instagram Stories that disappear.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section id="testimonials">
-  <div class="container">
-    <h2 class="section-title reveal">What Our Clients Say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial reveal">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"I went from having no website to a professional site that gets me bookings every day. The AI even organized my tattoo photos better than I could have."</p>
-        <div class="author">— @tattoosbypaketh, 101K followers</div>
-      </div>
-      
-      <div class="testimonial reveal">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Mint made changes to my site faster than any web designer I've worked with. Just tell it what you want and it's done in seconds."</p>
-        <div class="author">— @tatsuink, Anime tattoo specialist</div>
-      </div>
-      
-      <div class="testimonial reveal">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Best investment for my business. The website pays for itself with just one new client per month."</p>
-        <div class="author">— @guccierrezz, Bold color artist</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-  <div class="container">
-    <h2 class="section-title reveal">FAQ</h2>
-    <div class="faq-list">
-      <div class="faq-item reveal"><div class="faq-q">How fast do I get my site?</div><div class="faq-a">1 hour. Seriously.</div></div>
-      <div class="faq-item reveal"><div class="faq-q">Do I need to know code?</div><div class="faq-a">No. You talk to Mint. Mint does the rest.</div></div>
-      <div class="faq-item reveal"><div class="faq-q">Can I use my own domain?</div><div class="faq-a">Yes. Bring yours or we'll get you a new .com.</div></div>
-      <div class="faq-item reveal"><div class="faq-q">What if I want to change something?</div><div class="faq-a">Open Mint, tell it what you want. Done in seconds.</div></div>
-      <div class="faq-item reveal"><div class="faq-q">Is there a contract?</div><div class="faq-a">No. Cancel anytime.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="tagline">Minted by Mint 🌿</div>
-  <div class="links">
-    <a href="https://bayouwebstudio.com">bayouwebstudio.com</a>
-    <a href="https://instagram.com/bayouwebstudio">Instagram</a>
-    <a href="mailto:hello@bayouwebstudio.com">Email</a>
-  </div>
-  <p>© 2026 Bayou Web Studio</p>
-</footer>
+</div>
 
 <script>
-// Scroll reveal
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+(function() {
+  // ═══════════════════════════════════════════════════════
+  // SPRING PHYSICS ENGINE
+  // ═══════════════════════════════════════════════════════
+  class Spring {
+    constructor(value = 0, stiffness = 0.15, damping = 0.72) {
+      this.value = value;
+      this.velocity = 0;
+      this.target = value;
+      this.stiffness = stiffness;
+      this.damping = damping;
+    }
+    update() {
+      const force = (this.target - this.value) * this.stiffness;
+      this.velocity = this.velocity * this.damping + force;
+      this.value += this.velocity;
+      return this.value;
+    }
+    impulse(v) {
+      this.velocity += v;
+    }
+    isSettled() {
+      return Math.abs(this.velocity) < 0.0005 && Math.abs(this.target - this.value) < 0.0005;
+    }
+  }
 
-// FAQ toggle
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.addEventListener('click',()=>item.classList.toggle('open'));
-});
+  // ═══════════════════════════════════════════════════════
+  // DOM REFS
+  // ═══════════════════════════════════════════════════════
+  const CONVEX_URL = 'https://curious-lemming-262.convex.site/api/mint/chat';
+  let threadId = null;
+
+  // IG handle submit
+  window.igSubmit = function() {
+    const val = document.getElementById('ig-input').value.trim().replace(/^@/, '');
+    if (!val) { document.getElementById('ig-input').focus(); return; }
+    window.location.href = 'https://getminted.ai/dashboard/?ig=' + encodeURIComponent(val);
+  };
+  document.addEventListener('DOMContentLoaded', function() {
+    const igInput = document.getElementById('ig-input');
+    if (igInput) igInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') window.igSubmit(); });
+  });
+
+  // Mint chat popup
+  const mintChatMessages = [
+    "Hey! 👀 I already know your vibe from your IG. Want me to build your site real quick?",
+    "Psst — drop your handle above and I'll have your site ready before you finish this sentence 🚀",
+    "No cap, I built 164 sites already. Yours would take me 30 seconds ✨",
+    "Your competitors have websites. Do you? 😤 Let me fix that.",
+    "What if your Instagram actually sent people somewhere? I can make that happen — free 💚",
+  ];
+  let chatPopupShown = false;
+  window.closeMintChat = function() {
+    document.getElementById('mint-chat-popup').classList.remove('open');
+  };
+  window.openMintChat = function() {
+    const popup = document.getElementById('mint-chat-popup');
+    popup.classList.add('open');
+    if (!chatPopupShown) {
+      chatPopupShown = true;
+      const msg = mintChatMessages[Math.floor(Math.random() * mintChatMessages.length)];
+      setTimeout(() => addMessage(msg, 'mint'), 300);
+    }
+  };
+  // Auto-open after 3 seconds
+  setTimeout(window.openMintChat, 3000);
+
+  // Push IG section up when chat opens so it stays visible
+  window.openMintChat = (function(orig) {
+    return function() {
+      orig();
+      document.getElementById('app').style.paddingBottom = '42vh';
+    };
+  })(window.openMintChat);
+  window.closeMintChat = (function(orig) {
+    return function() {
+      orig();
+      document.getElementById('app').style.paddingBottom = '';
+    };
+  })(window.closeMintChat);
+
+  const wrapper = document.getElementById('mint-wrapper');
+  const blob = document.getElementById('mint-blob');
+  const blobBody = document.getElementById('mint-blob-body');
+  const shadow = document.getElementById('mint-shadow');
+  const bubble = document.getElementById('speech-bubble');
+  const zone = document.getElementById('character-zone');
+  const face = document.getElementById('mint-face');
+  const chatInput = document.getElementById('chat-input');
+  const sendBtn = document.getElementById('send-btn');
+  const chatHistory = document.getElementById('chat-history');
+
+  // Face elements
+  const eyeLeftPupil = document.getElementById('eye-left-pupil');
+  const eyeRightPupil = document.getElementById('eye-right-pupil');
+  const eyeLeftHighlight = document.getElementById('eye-left-highlight');
+  const eyeRightHighlight = document.getElementById('eye-right-highlight');
+  const eyeLeftWhite = document.getElementById('eye-left-white');
+  const eyeRightWhite = document.getElementById('eye-right-white');
+  const eyeLeftLid = document.getElementById('eye-left-lid');
+  const eyeRightLid = document.getElementById('eye-right-lid');
+  const mouth = document.getElementById('mouth');
+  const browLeft = document.getElementById('brow-left');
+  const browRight = document.getElementById('brow-right');
+  const sparkles = document.getElementById('sparkles');
+
+  const LEFT_EYE = { cx: 66, cy: 78 };
+  const RIGHT_EYE = { cx: 114, cy: 78 };
+  const MAX_PUPIL_OFFSET = 6;
+
+  let conversationHistory = [];
+  let isSending = false;
+  let hasAskedForHandle = false;
+  let currentExpression = 'idle';
+  let isTrackingMouse = false;
+  let mouseX = 0, mouseY = 0;
+
+  // ═══════════════════════════════════════════════════════
+  // SPRING INSTANCES — THE HEART OF THE PHYSICS
+  // ═══════════════════════════════════════════════════════
+
+  // Position springs (for drag & return-to-center)
+  const springPosX = new Spring(0, 0.08, 0.78);
+  const springPosY = new Spring(0, 0.08, 0.78);
+
+  // Deformation springs (for squish/stretch) — underdamped for Flubber feel
+  const springScaleX = new Spring(1, 0.18, 0.55);  // bouncy!
+  const springScaleY = new Spring(1, 0.18, 0.55);
+
+  // Rotation spring (for tilt during drag)
+  const springRotation = new Spring(0, 0.1, 0.65);
+
+  // Idle float spring
+  const springFloat = new Spring(0, 0.02, 0.92);
+
+  // Eye lag springs (face reacts AFTER body)
+  const springEyeX = new Spring(0, 0.08, 0.7);
+  const springEyeY = new Spring(0, 0.08, 0.7);
+
+  // Jiggle system — separate springs for organic wobble
+  const springJiggle1 = new Spring(0, 0.12, 0.6);
+  const springJiggle2 = new Spring(0, 0.15, 0.58);
+
+  // ═══════════════════════════════════════════════════════
+  // BLOB SHAPE MORPHING (organic, multi-frequency sin waves)
+  // ═══════════════════════════════════════════════════════
+  let morphTime = 0;
+  const MORPH_POINTS = 8; // control points around the blob
+
+  function getOrganicBorderRadius(t) {
+    // Generate 8 "radius" values using layered sine waves
+    const radii = [];
+    for (let i = 0; i < MORPH_POINTS; i++) {
+      const noise =
+        Math.sin(t * 1.3 + i * 2.1) * 8 +
+        Math.sin(t * 0.7 + i * 3.7) * 5 +
+        Math.sin(t * 2.1 + i * 1.3) * 3;
+      radii.push(50 + noise); // base 50% ± organic noise
+    }
+    // CSS border-radius: TL TR BR BL / TL TR BR BL
+    return `${radii[0]}% ${radii[1]}% ${radii[2]}% ${radii[3]}% / ${radii[4]}% ${radii[5]}% ${radii[6]}% ${radii[7]}%`;
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // DRAG & INTERACTION STATE
+  // ═══════════════════════════════════════════════════════
+  let isDragging = false;
+  let dragStartX = 0, dragStartY = 0;
+  let dragOffsetX = 0, dragOffsetY = 0;
+
+  // Velocity tracking (last N positions for smooth velocity calc)
+  const velocityHistory = [];
+  const VELOCITY_SAMPLES = 5;
+  let lastDragX = 0, lastDragY = 0;
+  let lastDragTime = 0;
+
+  // Pressed state for squish
+  let isPressed = false;
+  let pressStartTime = 0;
+
+  // ═══════════════════════════════════════════════════════
+  // STRETCH DEFORMATION SYSTEM
+  // ═══════════════════════════════════════════════════════
+  const stretchCanvas = document.getElementById('stretch-canvas');
+  const stretchCtx = stretchCanvas.getContext('2d');
+  let isStretching = false;
+  let stretchFingerX = 0, stretchFingerY = 0;
+  const springStretch = new Spring(0, 0.25, 0.45); // bouncy snap-back
+  const springStretchAngle = new Spring(0, 0.12, 0.65);
+  let stretchAngle = 0;
+  let stretchReleaseJiggle = 0; // extra jiggle on snap-back
+  const MAX_STRETCH_DIST = 160; // max pixels you can stretch
+  const BLOB_RADIUS = 90;
+  let stretchActive = false; // true when canvas is rendering the stretch
+  let stretchDragStarted = false; // differentiate tap from drag
+
+  function resizeStretchCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const rect = zone.getBoundingClientRect();
+    stretchCanvas.width = rect.width * dpr;
+    stretchCanvas.height = rect.height * dpr;
+    stretchCanvas.style.width = rect.width + 'px';
+    stretchCanvas.style.height = rect.height + 'px';
+    stretchCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resizeStretchCanvas();
+  window.addEventListener('resize', resizeStretchCanvas);
+
+  function getBlobCenter() {
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const zoneRect = zone.getBoundingClientRect();
+    return {
+      x: wrapperRect.left + wrapperRect.width / 2 - zoneRect.left,
+      y: wrapperRect.top + wrapperRect.height / 2 - zoneRect.top
+    };
+  }
+
+  function drawStretchBlob(blobX, blobY, fingerX, fingerY, stretch) {
+    const ctx = stretchCtx;
+    const canvasRect = zone.getBoundingClientRect();
+    ctx.clearRect(0, 0, canvasRect.width, canvasRect.height);
+
+    if (stretch < 0.02) return;
+
+    const dx = fingerX - blobX;
+    const dy = fingerY - blobY;
+    const dist = Math.hypot(dx, dy) || 1;
+    const angle = Math.atan2(dy, dx);
+    const perp = angle + Math.PI / 2;
+
+    // How far the tendril tip extends
+    const tendrilDist = dist * stretch;
+    const tipX = blobX + Math.cos(angle) * tendrilDist;
+    const tipY = blobY + Math.sin(angle) * tendrilDist;
+
+    // Volume conservation — body squishes slightly as you stretch
+    const bodyR = BLOB_RADIUS * (1 - stretch * 0.15);
+
+    // Neck width: wide at base, narrows toward tip
+    const neckBase = bodyR * (0.55 - stretch * 0.25);
+    const neckTip = Math.max(4, bodyR * (0.15 - stretch * 0.05));
+
+    ctx.save();
+
+    // === Draw main blob body (slight elongation toward pull) ===
+    ctx.beginPath();
+    ctx.save();
+    ctx.translate(blobX, blobY);
+    ctx.rotate(angle);
+    ctx.scale(1 - stretch * 0.1, 1 + stretch * 0.05);
+    ctx.arc(0, 0, bodyR, 0, Math.PI * 2);
+    ctx.restore();
+
+    // Radial gradient for the main body
+    const blobGrad = ctx.createRadialGradient(
+      blobX - bodyR * 0.3, blobY - bodyR * 0.35, 0,
+      blobX, blobY, bodyR * 1.1
+    );
+    blobGrad.addColorStop(0, '#6EFFD4');
+    blobGrad.addColorStop(0.35, '#00C882');
+    blobGrad.addColorStop(0.75, '#00A86B');
+    blobGrad.addColorStop(1, '#007A4D');
+    ctx.fillStyle = blobGrad;
+    ctx.fill();
+
+    // === Draw the tendril — starts INSIDE the blob for seamless overlap ===
+    if (stretch > 0.05) {
+      // Overlap origin inside the blob body so there's zero seam
+      const overlapX = blobX + Math.cos(angle) * bodyR * 0.5;
+      const overlapY = blobY + Math.sin(angle) * bodyR * 0.5;
+      const overlapL = { x: overlapX + Math.cos(perp) * neckBase * 1.1, y: overlapY + Math.sin(perp) * neckBase * 1.1 };
+      const overlapR = { x: overlapX - Math.cos(perp) * neckBase * 1.1, y: overlapY - Math.sin(perp) * neckBase * 1.1 };
+
+      // Tip edge points
+      const tipL = { x: tipX + Math.cos(perp) * neckTip, y: tipY + Math.sin(perp) * neckTip };
+      const tipR = { x: tipX - Math.cos(perp) * neckTip, y: tipY - Math.sin(perp) * neckTip };
+
+      // Bezier control point distances
+      const cpDist = tendrilDist * 0.4;
+      const cpL2 = { x: tipL.x - Math.cos(angle) * cpDist * 0.5, y: tipL.y - Math.sin(angle) * cpDist * 0.5 };
+      const cpR2 = { x: tipR.x - Math.cos(angle) * cpDist * 0.5, y: tipR.y - Math.sin(angle) * cpDist * 0.5 };
+
+      ctx.beginPath();
+      ctx.moveTo(overlapL.x, overlapL.y);
+      // Left side of tendril
+      ctx.bezierCurveTo(
+        overlapL.x + Math.cos(angle) * cpDist,
+        overlapL.y + Math.sin(angle) * cpDist,
+        cpL2.x, cpL2.y,
+        tipL.x, tipL.y
+      );
+      // Round tip
+      ctx.arc(tipX, tipY, neckTip, perp, perp + Math.PI, false);
+      // Right side back
+      ctx.bezierCurveTo(
+        cpR2.x, cpR2.y,
+        overlapR.x + Math.cos(angle) * cpDist,
+        overlapR.y + Math.sin(angle) * cpDist,
+        overlapR.x, overlapR.y
+      );
+      // Close back through the blob interior
+      ctx.quadraticCurveTo(
+        overlapX - Math.cos(angle) * 10,
+        overlapY - Math.sin(angle) * 10,
+        overlapL.x, overlapL.y
+      );
+      ctx.closePath();
+
+      // Gradient along the tendril length — continuous with body colors
+      const tendrilGrad = ctx.createLinearGradient(blobX, blobY, tipX, tipY);
+      tendrilGrad.addColorStop(0, '#00C882');
+      tendrilGrad.addColorStop(0.5, '#00A86B');
+      tendrilGrad.addColorStop(1, '#007A4D');
+      ctx.fillStyle = tendrilGrad;
+      ctx.fill();
+
+      // Specular highlight on tendril for 3D roundness
+      ctx.beginPath();
+      const hiliteW = neckBase * 0.3;
+      const hiliteX = blobX + Math.cos(angle) * bodyR + Math.cos(perp) * hiliteW;
+      const hiliteY = blobY + Math.sin(angle) * bodyR + Math.sin(perp) * hiliteW;
+      const hiliteEndX = tipX + Math.cos(perp) * neckTip * 0.3;
+      const hiliteEndY = tipY + Math.sin(perp) * neckTip * 0.3;
+      ctx.moveTo(hiliteX, hiliteY);
+      ctx.lineTo(hiliteEndX, hiliteEndY);
+      ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+      ctx.lineWidth = hiliteW * 1.5;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+
+    // === Blob specular highlight on top ===
+    ctx.beginPath();
+    ctx.save();
+    ctx.translate(blobX - bodyR * 0.22, blobY - bodyR * 0.28);
+    ctx.scale(bodyR * 0.45, bodyR * 0.28);
+    ctx.arc(0, 0, 1, 0, Math.PI * 2);
+    ctx.restore();
+    const specGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, 1);
+    specGrad.addColorStop(0, 'rgba(255,255,255,0.35)');
+    specGrad.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.save();
+    ctx.translate(blobX - bodyR * 0.22, blobY - bodyR * 0.28);
+    ctx.scale(bodyR * 0.45, bodyR * 0.28);
+    ctx.fillStyle = specGrad;
+    ctx.fill();
+    ctx.restore();
+
+    // === Drop shadow under everything ===
+    ctx.save();
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.beginPath();
+    ctx.arc(blobX, blobY, bodyR + 5, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(0,200,130,0.12)';
+    ctx.filter = 'blur(15px)';
+    ctx.fill();
+    ctx.filter = 'none';
+    ctx.restore();
+
+    ctx.restore();
+  }
+
+  // Stretch animation loop (runs alongside main physics loop)
+  function stretchRenderLoop() {
+    requestAnimationFrame(stretchRenderLoop);
+
+    if (!stretchActive && springStretch.isSettled()) {
+      // Nothing to render, clear canvas
+      const canvasRect = zone.getBoundingClientRect();
+      stretchCtx.clearRect(0, 0, canvasRect.width, canvasRect.height);
+      return;
+    }
+
+    springStretch.update();
+
+    const center = getBlobCenter();
+    const stretch = Math.max(0, springStretch.value);
+
+    if (stretch < 0.01) {
+      // Done retracting — hide canvas, show blob body
+      const canvasRect = zone.getBoundingClientRect();
+      stretchCtx.clearRect(0, 0, canvasRect.width, canvasRect.height);
+      if (!stretchActive) {
+        blobBody.style.opacity = '1';
+        shadow.style.opacity = '';
+        document.querySelector('.mint-glow').style.opacity = '';
+        // Reset stretch expression
+        if (currentExpression !== 'idle' && currentExpression !== 'happy') {
+          setExpression('idle');
+        }
+      }
+      return;
+    }
+
+    // Keep blob body hidden while canvas is drawing
+    blobBody.style.opacity = '0';
+    shadow.style.opacity = '0';
+    document.querySelector('.mint-glow').style.opacity = '0';
+
+    // Calculate finger position (during drag: actual finger, during retract: last known angle)
+    let fx, fy;
+    if (stretchActive) {
+      const zoneRect = zone.getBoundingClientRect();
+      fx = stretchFingerX - zoneRect.left;
+      fy = stretchFingerY - zoneRect.top;
+    } else {
+      // Retracting: project from center along last angle
+      const retractDist = stretch * MAX_STRETCH_DIST;
+      fx = center.x + Math.cos(stretchAngle) * retractDist;
+      fy = center.y + Math.sin(stretchAngle) * retractDist;
+    }
+
+    drawStretchBlob(center.x, center.y, fx, fy, stretch);
+
+    // Face expression based on stretch amount
+    if (stretch > 0.02) {
+      if (stretch < 0.35) {
+        if (currentExpression !== 'thinking') setExpression('thinking');
+      } else if (stretch < 0.7) {
+        if (currentExpression !== 'surprised') setExpression('surprised');
+      } else {
+        if (currentExpression !== 'excited') setExpression('excited');
+      }
+
+      // Eyes look toward stretch direction
+      const eyeOx = Math.cos(stretchAngle) * MAX_PUPIL_OFFSET;
+      const eyeOy = Math.sin(stretchAngle) * MAX_PUPIL_OFFSET;
+      setPupilOffset(eyeOx, eyeOy);
+    }
+  }
+  requestAnimationFrame(stretchRenderLoop);
+
+  // ═══════════════════════════════════════════════════════
+  // MAIN ANIMATION LOOP — runs continuously via rAF
+  // ═══════════════════════════════════════════════════════
+  let lastFrameTime = performance.now();
+
+  function physicsLoop(now) {
+    requestAnimationFrame(physicsLoop);
+
+    const dt = Math.min((now - lastFrameTime) / 16.67, 3); // normalize to ~60fps, cap at 3x
+    lastFrameTime = now;
+
+    // Advance morph time
+    morphTime += 0.008 * dt;
+
+    // Update all springs
+    springPosX.update();
+    springPosY.update();
+    springScaleX.update();
+    springScaleY.update();
+    springRotation.update();
+    springFloat.update();
+    springEyeX.update();
+    springEyeY.update();
+    springJiggle1.update();
+    springJiggle2.update();
+
+    // Idle floating (gentle sine-driven target)
+    if (!isDragging && !isPressed) {
+      springFloat.target = Math.sin(now * 0.002) * 8;
+    }
+
+    // ─── Apply transforms ───
+
+    // Position (drag or spring-return + float)
+    const px = springPosX.value;
+    const py = springPosY.value + springFloat.value;
+
+    // Deformation with volume conservation
+    let sx = springScaleX.value;
+    let sy = springScaleY.value;
+
+    // Add jiggle on top
+    sx += springJiggle1.value * 0.15;
+    sy -= springJiggle1.value * 0.15; // opposite for volume conservation
+    sx -= springJiggle2.value * 0.08;
+    sy += springJiggle2.value * 0.08;
+
+    const rot = springRotation.value;
+
+    // Apply to wrapper (position)
+    wrapper.style.transform = `translate(${px}px, ${py}px)`;
+
+    // Apply to blob (deformation + rotation)
+    blob.style.transform = `scale(${sx}, ${sy}) rotate(${rot}deg)`;
+
+    // Organic blob shape morph
+    blobBody.style.borderRadius = getOrganicBorderRadius(morphTime);
+
+    // Shadow reacts to height/position
+    const shadowScale = 1 - Math.abs(springFloat.value) * 0.008;
+    const shadowOpacity = 0.25 - Math.abs(springFloat.value) * 0.008;
+    shadow.style.transform = `translateX(-50%) scaleX(${shadowScale + (sx - 1) * 0.3}) scaleY(${Math.max(0.3, shadowScale)})`;
+    shadow.style.opacity = Math.max(0.1, shadowOpacity);
+
+    // Face lags behind body (secondary motion!)
+    springEyeX.target = (springScaleX.value - 1) * -15 + springRotation.value * 0.3;
+    springEyeY.target = (springScaleY.value - 1) * -10;
+
+    // Face is now outside wrapper — position it over blob center
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const zoneRect = zone.getBoundingClientRect();
+    const faceCenterX = wrapperRect.left - zoneRect.left + wrapperRect.width / 2 - 90;
+    const faceCenterY = wrapperRect.top - zoneRect.top + wrapperRect.height / 2 - 90;
+    face.style.left = faceCenterX + springEyeX.value + 'px';
+    face.style.top = faceCenterY + springEyeY.value + 'px';
+  }
+
+  requestAnimationFrame(physicsLoop);
+
+  // ═══════════════════════════════════════════════════════
+  // TOUCH/MOUSE INTERACTION
+  // ═══════════════════════════════════════════════════════
+
+  function getXY(e) {
+    if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    return { x: e.clientX, y: e.clientY };
+  }
+
+  let lastTapTime = 0;
+  let tapTimer = null;
+
+  function handlePointerDown(e) {
+    if (e.target === chatInput || e.target === sendBtn || e.target.closest('.send-btn') || e.target.closest('.login-btn')) return;
+
+    const { x, y } = getXY(e);
+    tapTouchX = x;
+    tapTouchY = y;
+    dragStartX = x;
+    dragStartY = y;
+    isDragging = true;
+    isPressed = true;
+    pressStartTime = performance.now();
+    stretchDragStarted = false;
+
+    // Reset velocity history
+    velocityHistory.length = 0;
+    lastDragX = x;
+    lastDragY = y;
+    lastDragTime = performance.now();
+
+    // SQUISH! — press down like putty
+    springScaleX.target = 1.25;
+    springScaleY.target = 0.75;
+    springFloat.target = 0; // stop floating when held
+
+    // Trigger jiggle impulse
+    springJiggle1.impulse(0.3);
+  }
+
+  function handlePointerMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const { x, y } = getXY(e);
+    const now = performance.now();
+
+    // Track velocity
+    const dtMs = now - lastDragTime;
+    if (dtMs > 0) {
+      const vx = (x - lastDragX) / dtMs * 16;
+      const vy = (y - lastDragY) / dtMs * 16;
+      velocityHistory.push({ vx, vy, t: now });
+      if (velocityHistory.length > VELOCITY_SAMPLES) velocityHistory.shift();
+    }
+    lastDragX = x;
+    lastDragY = y;
+    lastDragTime = now;
+
+    // Distance from drag start
+    const totalDx = x - dragStartX;
+    const totalDy = y - dragStartY;
+    const totalDist = Math.hypot(totalDx, totalDy);
+
+    // Switch to stretch mode after moving 12px (not a tap)
+    if (!stretchDragStarted && totalDist > 12) {
+      stretchDragStarted = true;
+      stretchActive = true;
+      // Reset position springs (blob stays centered)
+      springPosX.target = 0;
+      springPosY.value = 0;
+      springPosX.value = 0;
+      springPosY.target = 0;
+      springScaleX.target = 1;
+      springScaleY.target = 1;
+      springRotation.target = 0;
+    }
+
+    if (stretchDragStarted) {
+      // === STRETCH MODE — blob stays put, surface stretches ===
+      stretchFingerX = x;
+      stretchFingerY = y;
+
+      // Lock position springs to center
+      springPosX.value = 0; springPosX.target = 0; springPosX.velocity = 0;
+      springPosY.value = 0; springPosY.target = 0; springPosY.velocity = 0;
+      springScaleX.value = 1; springScaleX.target = 1; springScaleX.velocity = 0;
+      springScaleY.value = 1; springScaleY.target = 1; springScaleY.velocity = 0;
+      springRotation.value = 0; springRotation.target = 0; springRotation.velocity = 0;
+
+      // Calculate stretch amount (0 to 1)
+      const center = getBlobCenter();
+      const zoneRect = zone.getBoundingClientRect();
+      const fx = x - zoneRect.left;
+      const fy = y - zoneRect.top;
+      const distFromCenter = Math.hypot(fx - center.x, fy - center.y);
+
+      // Stretch starts from the surface of the blob
+      const distFromSurface = Math.max(0, distFromCenter - BLOB_RADIUS * 0.3);
+      const stretchAmt = Math.min(distFromSurface / MAX_STRETCH_DIST, 1);
+
+      springStretch.value = stretchAmt;
+      springStretch.target = stretchAmt;
+      springStretch.velocity = 0; // no spring during active drag
+
+      stretchAngle = Math.atan2(fy - center.y, fx - center.x);
+    }
+  }
+
+  function handlePointerUp(e) {
+    if (!isDragging) return;
+
+    const pt = e.changedTouches ? e.changedTouches[0] : e;
+    const dx = Math.abs(pt.clientX - dragStartX);
+    const dy = Math.abs(pt.clientY - dragStartY);
+
+    isDragging = false;
+    isPressed = false;
+
+    if (stretchDragStarted) {
+      // === RELEASE STRETCH ===
+      stretchActive = false;
+      stretchDragStarted = false;
+
+      const releasedStretch = springStretch.value;
+
+      // Snap the stretch spring back to 0
+      springStretch.target = 0;
+      // Extra velocity for snappy snap-back — the more stretched, the more satisfying
+      springStretch.velocity = -releasedStretch * 1.8;
+
+      // JIGGLE the blob body on snap-back — this is the payoff
+      const snapForce = releasedStretch;
+      springJiggle1.impulse(snapForce * 2.5);
+      springJiggle2.impulse(-snapForce * 2.0);
+      springScaleX.impulse(snapForce * 0.4);
+      springScaleY.impulse(-snapForce * 0.4);
+
+      // Extra big snap if stretched far
+      if (releasedStretch > 0.7) {
+        springJiggle1.impulse(snapForce * 1.5);
+        springJiggle2.impulse(-snapForce * 1.0);
+        // Small position bounce away from stretch direction
+        springPosX.impulse(-Math.cos(stretchAngle) * snapForce * 8);
+        springPosY.impulse(-Math.sin(stretchAngle) * snapForce * 8);
+      }
+
+      // Reset deformation
+      springScaleX.target = 1;
+      springScaleY.target = 1;
+      springRotation.target = 0;
+      springPosX.target = 0;
+      springPosY.target = 0;
+
+      resetIdle();
+      return;
+    }
+
+    // === NOT A STRETCH — regular release (tap/quick drag) ===
+
+    // Calculate release velocity from history
+    let releaseVX = 0, releaseVY = 0;
+    if (velocityHistory.length > 0) {
+      for (const v of velocityHistory) {
+        releaseVX += v.vx;
+        releaseVY += v.vy;
+      }
+      releaseVX /= velocityHistory.length;
+      releaseVY /= velocityHistory.length;
+    }
+
+    // Spring back to center
+    springPosX.target = 0;
+    springPosY.target = 0;
+
+    // Reset deformation
+    springScaleX.target = 1;
+    springScaleY.target = 1;
+    springRotation.target = 0;
+
+    // Release pop
+    const releaseSpeed = Math.sqrt(releaseVX * releaseVX + releaseVY * releaseVY);
+    const popForce = Math.min(0.15 + releaseSpeed * 0.03, 0.5);
+    springScaleX.impulse(-popForce * 0.8);
+    springScaleY.impulse(popForce);
+    springJiggle1.impulse(popForce * 2);
+    springJiggle2.impulse(-popForce * 1.5);
+
+    // Tap detection
+    if (dx < 10 && dy < 10) {
+      const now = Date.now();
+      if (now - lastTapTime < 300) {
+        clearTimeout(tapTimer);
+        doDoubleTap();
+        lastTapTime = 0;
+      } else {
+        lastTapTime = now;
+        tapTimer = setTimeout(() => { doSingleTap(); lastTapTime = 0; }, 300);
+      }
+    }
+
+    resetIdle();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // ZONE DETECTION
+  // ═══════════════════════════════════════════════════════
+  const armLeft = document.getElementById('arm-left');
+  const armRight = document.getElementById('arm-right');
+
+  function getZone(touchX, touchY) {
+    const rect = blobBody.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const relX = touchX - cx;
+    const relY = touchY - cy;
+    const relXNorm = relX / (rect.width / 2);
+    const relYNorm = relY / (rect.height / 2);
+
+    // Face zone: center region
+    if (Math.abs(relXNorm) < 0.4 && relYNorm > -0.3 && relYNorm < 0.3) return 'face';
+    // Head: top quarter
+    if (relYNorm < -0.4) return 'head';
+    // Bottom: bottom quarter
+    if (relYNorm > 0.4) return 'bottom';
+    // Left/right sides
+    if (relXNorm < -0.3) return 'left';
+    if (relXNorm > 0.3) return 'right';
+    // Default center
+    return 'belly';
+  }
+
+  // Zone speech bubbles
+  const zoneBubbles = {
+    head:   ["Hey, that's my head! 😳", "Careful up there 🥺", "...hi 👀"],
+    belly:  ["hehehe 😂", "STOP that tickles 🤣", "okay okay I'm ticklish 😭"],
+    left:   ["OW— wait that didn't hurt 😅", "Poke! 👈", "Rude! (jk) 😂"],
+    right:  ["Hey! 👉", "Did you just poke me? 😤", "bold move 😅"],
+    bottom: ["WOOHOO 🚀", "to infinity and beyond 🚀", "wheeee!! 😵‍💫"],
+    face:   ["My face! 😤", "👀 Hey, eyes up here", "That's personal! 😂"],
+  };
+
+  // Zone ripple colors
+  const zoneColors = {
+    head: 'rgba(100,180,255,0.5)',
+    belly: 'rgba(0,200,130,0.5)',
+    left: 'rgba(255,160,60,0.5)',
+    right: 'rgba(255,160,60,0.5)',
+    bottom: 'rgba(255,80,120,0.5)',
+    face: 'rgba(200,130,255,0.5)',
+  };
+
+  function spawnRipple(x, y, zone) {
+    const r = document.createElement('div');
+    r.className = 'touch-ripple';
+    r.style.left = x + 'px';
+    r.style.top = y + 'px';
+    r.style.background = zoneColors[zone] || 'rgba(0,200,130,0.5)';
+    document.body.appendChild(r);
+    requestAnimationFrame(() => r.classList.add('expand'));
+    setTimeout(() => r.remove(), 400);
+  }
+
+  // Store touch start position for zone detection on tap
+  let tapTouchX = 0, tapTouchY = 0;
+
+  // Tickle jitter state
+  let jitterCount = 0;
+  let jitterTimer = null;
+
+  function doTickleJitter() {
+    jitterCount = 0;
+    clearInterval(jitterTimer);
+    jitterTimer = setInterval(() => {
+      if (jitterCount >= 4) { clearInterval(jitterTimer); return; }
+      const dir = jitterCount % 2 === 0 ? 1 : -1;
+      springScaleX.impulse(dir * 0.12);
+      springJiggle1.impulse(dir * 0.4);
+      springJiggle2.impulse(-dir * 0.3);
+      jitterCount++;
+    }, 90);
+  }
+
+  // Bottom zone landing detection
+  let bottomLaunchActive = false;
+
+  // Face cover animation
+  function coverFace() {
+    armLeft.classList.add('covering');
+    armRight.classList.add('covering');
+    setTimeout(() => {
+      armLeft.classList.remove('covering');
+      armRight.classList.remove('covering');
+    }, 800);
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // ADDITIONAL EXPRESSIONS (shy, tickle, cross-eyed)
+  // ═══════════════════════════════════════════════════════
+  function setExpressionZone(expr) {
+    currentExpression = expr;
+    switch (expr) {
+      case 'shy':
+        eyeLeftWhite.setAttribute('ry', '14');
+        eyeRightWhite.setAttribute('ry', '14');
+        eyeLeftPupil.setAttribute('ry', '7');
+        eyeRightPupil.setAttribute('ry', '7');
+        eyeLeftPupil.setAttribute('rx', '7');
+        eyeRightPupil.setAttribute('rx', '7');
+        mouth.setAttribute('d', 'M80,112 Q90,118 100,112');
+        mouth.setAttribute('fill', 'none');
+        browLeft.setAttribute('d', 'M54,60 Q62,58 70,62');
+        browRight.setAttribute('d', 'M110,62 Q118,58 126,60');
+        sparkles.setAttribute('opacity', '0');
+        // Eyes look down-left
+        setPupilOffset(-4, 4);
+        // Blush intensify via inline style
+        document.querySelectorAll('.mint-face ellipse[cx="44"], .mint-face ellipse[cx="136"]').forEach(el => {
+          el.setAttribute('fill', 'rgba(255,130,160,0.45)');
+        });
+        break;
+      case 'tickle':
+        // Squint-laugh eyes (happy eyes but more squished)
+        eyeLeftWhite.setAttribute('ry', '4');
+        eyeRightWhite.setAttribute('ry', '4');
+        eyeLeftPupil.setAttribute('ry', '3');
+        eyeRightPupil.setAttribute('ry', '3');
+        eyeLeftPupil.setAttribute('rx', '7');
+        eyeRightPupil.setAttribute('rx', '7');
+        // Huge open smile
+        mouth.setAttribute('d', 'M66,106 Q90,140 114,106');
+        mouth.setAttribute('fill', 'rgba(0,60,35,0.35)');
+        browLeft.setAttribute('d', 'M52,58 Q62,54 72,58');
+        browRight.setAttribute('d', 'M108,58 Q118,54 128,58');
+        sparkles.setAttribute('opacity', '0');
+        break;
+      case 'crosseyed':
+        eyeLeftWhite.setAttribute('ry', '18');
+        eyeRightWhite.setAttribute('ry', '18');
+        eyeLeftPupil.setAttribute('ry', '9');
+        eyeRightPupil.setAttribute('ry', '9');
+        eyeLeftPupil.setAttribute('rx', '8');
+        eyeRightPupil.setAttribute('rx', '8');
+        // Cross: left pupil moves right, right pupil moves left
+        eyeLeftPupil.setAttribute('cx', LEFT_EYE.cx + 6);
+        eyeRightPupil.setAttribute('cx', RIGHT_EYE.cx - 6);
+        eyeLeftPupil.setAttribute('cy', LEFT_EYE.cy);
+        eyeRightPupil.setAttribute('cy', RIGHT_EYE.cy);
+        eyeLeftHighlight.setAttribute('cx', LEFT_EYE.cx + 10);
+        eyeLeftHighlight.setAttribute('cy', LEFT_EYE.cy - 5);
+        eyeRightHighlight.setAttribute('cx', RIGHT_EYE.cx - 2);
+        eyeRightHighlight.setAttribute('cy', RIGHT_EYE.cy - 5);
+        mouth.setAttribute('d', 'M78,112 Q88,118 100,112');
+        mouth.setAttribute('fill', 'none');
+        browLeft.setAttribute('d', 'M50,56 Q62,50 74,58');
+        browRight.setAttribute('d', 'M106,58 Q118,50 130,56');
+        sparkles.setAttribute('opacity', '0');
+        break;
+      default:
+        setExpression(expr);
+        return;
+    }
+  }
+
+  function resetBlush() {
+    document.querySelectorAll('.mint-face ellipse[cx="44"], .mint-face ellipse[cx="136"]').forEach(el => {
+      el.setAttribute('fill', 'rgba(255,130,160,0.2)');
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // ZONE-BASED TAP REACTIONS
+  // ═══════════════════════════════════════════════════════
+  function doZoneTap(zone, x, y) {
+    spawnRipple(x, y, zone);
+    showBubble(pick(zoneBubbles[zone]));
+    resetIdle();
+
+    switch (zone) {
+      case 'head':
+        // Gentle tilt forward, shy expression
+        springScaleY.velocity -= 0.03;
+        springScaleX.velocity += 0.02;
+        springRotation.impulse(4);
+        springPosY.impulse(1.5);
+        springJiggle1.impulse(0.15);
+        setExpressionZone('shy');
+        setTimeout(() => { resetBlush(); setExpression('idle'); }, 2000);
+        spawnParticles(3);
+        break;
+
+      case 'belly':
+        // TICKLISH — rapid jitter, laugh expression
+        setExpressionZone('tickle');
+        doTickleJitter();
+        springScaleX.impulse(0.08);
+        springScaleY.impulse(-0.06);
+        spawnParticles(6);
+        setTimeout(() => {
+          setExpression('happy');
+          setTimeout(() => setExpression('idle'), 1200);
+        }, 1000);
+        break;
+
+      case 'left':
+        // Lurch RIGHT (away from left poke)
+        springPosX.velocity += 15;
+        springScaleX.velocity += 0.15;
+        springJiggle1.impulse(0.6);
+        springJiggle2.impulse(-0.4);
+        setExpression('surprised');
+        setTimeout(() => {
+          setExpression('happy');
+          setTimeout(() => setExpression('idle'), 1200);
+        }, 500);
+        spawnParticles(4);
+        break;
+
+      case 'right':
+        // Lurch LEFT (away from right poke)
+        springPosX.velocity -= 15;
+        springScaleX.velocity += 0.15;
+        springJiggle1.impulse(-0.6);
+        springJiggle2.impulse(0.4);
+        setExpression('surprised');
+        setTimeout(() => {
+          setExpression('happy');
+          setTimeout(() => setExpression('idle'), 1200);
+        }, 500);
+        spawnParticles(4);
+        break;
+
+      case 'bottom':
+        // BIG upward launch
+        springPosY.velocity -= 22;
+        bottomLaunchActive = true;
+        // Stretch tall at launch
+        springScaleY.impulse(0.25);
+        springScaleX.impulse(-0.15);
+        setExpression('excited');
+        spawnParticles(8);
+
+        // Landing squish detection — poll until returning down
+        let launchCheck = setInterval(() => {
+          if (bottomLaunchActive && springPosY.velocity > 0 && springPosY.value < 5) {
+            // Landing! Big squish
+            springScaleY.impulse(-0.35);
+            springScaleX.impulse(0.3);
+            springJiggle1.impulse(0.8);
+            springJiggle2.impulse(-0.6);
+            bottomLaunchActive = false;
+            clearInterval(launchCheck);
+            setTimeout(() => {
+              setExpression('happy');
+              setTimeout(() => setExpression('idle'), 1200);
+            }, 400);
+          }
+        }, 16);
+        // Safety timeout
+        setTimeout(() => { clearInterval(launchCheck); bottomLaunchActive = false; }, 2000);
+        break;
+
+      case 'face':
+        // Cover face with arms, cross eyes
+        coverFace();
+        setExpressionZone('crosseyed');
+        springScaleX.impulse(0.08);
+        springScaleY.impulse(-0.06);
+        springJiggle1.impulse(0.3);
+        spawnParticles(4);
+        setTimeout(() => {
+          setExpression('surprised');
+          setTimeout(() => setExpression('idle'), 1200);
+        }, 800);
+        break;
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // TAP INTERACTIONS (zone-aware)
+  // ═══════════════════════════════════════════════════════
+
+  function doSingleTap() {
+    const zone = getZone(tapTouchX, tapTouchY);
+    doZoneTap(zone, tapTouchX, tapTouchY);
+  }
+
+  function doDoubleTap() {
+    // BIG excited bounce — Flubber-style overshoot (unchanged)
+    springScaleX.impulse(0.3);
+    springScaleY.impulse(-0.35);
+    springJiggle1.impulse(1.0);
+    springJiggle2.impulse(-0.8);
+
+    // Pop up high
+    springPosY.impulse(-5);
+
+    // Spin via rotation spring
+    springRotation.impulse(15);
+
+    setExpression('excited');
+    setTimeout(() => {
+      setExpression('happy');
+      setTimeout(() => setExpression('idle'), 1500);
+    }, 700);
+
+    showBubble("Let's GOOO! 🔥");
+    spawnParticles(10);
+    resetIdle();
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // EXPRESSION SYSTEM (preserved from original)
+  // ═══════════════════════════════════════════════════════
+  function setExpression(expr) {
+    currentExpression = expr;
+    switch (expr) {
+      case 'idle':
+        eyeLeftWhite.setAttribute('ry', '18');
+        eyeRightWhite.setAttribute('ry', '18');
+        eyeLeftPupil.setAttribute('ry', '9');
+        eyeRightPupil.setAttribute('ry', '9');
+        eyeLeftPupil.setAttribute('rx', '8');
+        eyeRightPupil.setAttribute('rx', '8');
+        mouth.setAttribute('d', 'M76,110 Q90,122 104,110');
+        mouth.setAttribute('fill', 'none');
+        browLeft.setAttribute('d', 'M52,62 Q62,56 72,60');
+        browRight.setAttribute('d', 'M108,60 Q118,56 128,62');
+        sparkles.setAttribute('opacity', '0');
+        break;
+      case 'happy':
+        eyeLeftWhite.setAttribute('ry', '6');
+        eyeRightWhite.setAttribute('ry', '6');
+        eyeLeftPupil.setAttribute('ry', '4');
+        eyeRightPupil.setAttribute('ry', '4');
+        mouth.setAttribute('d', 'M70,108 Q90,132 110,108');
+        mouth.setAttribute('fill', 'rgba(0,60,35,0.3)');
+        browLeft.setAttribute('d', 'M52,60 Q62,55 72,58');
+        browRight.setAttribute('d', 'M108,58 Q118,55 128,60');
+        sparkles.setAttribute('opacity', '0');
+        break;
+      case 'surprised':
+        eyeLeftWhite.setAttribute('ry', '22');
+        eyeRightWhite.setAttribute('ry', '22');
+        eyeLeftPupil.setAttribute('ry', '5');
+        eyeRightPupil.setAttribute('ry', '5');
+        eyeLeftPupil.setAttribute('rx', '5');
+        eyeRightPupil.setAttribute('rx', '5');
+        mouth.setAttribute('d', 'M82,108 Q82,124 90,124 Q98,124 98,108 Q98,100 90,100 Q82,100 82,108 Z');
+        mouth.setAttribute('fill', 'rgba(0,60,35,0.3)');
+        browLeft.setAttribute('d', 'M50,55 Q62,46 74,55');
+        browRight.setAttribute('d', 'M106,55 Q118,46 130,55');
+        sparkles.setAttribute('opacity', '0');
+        break;
+      case 'excited':
+        eyeLeftWhite.setAttribute('ry', '20');
+        eyeRightWhite.setAttribute('ry', '20');
+        eyeLeftPupil.setAttribute('ry', '10');
+        eyeRightPupil.setAttribute('ry', '10');
+        eyeLeftPupil.setAttribute('rx', '9');
+        eyeRightPupil.setAttribute('rx', '9');
+        mouth.setAttribute('d', 'M68,108 Q90,136 112,108');
+        mouth.setAttribute('fill', 'rgba(0,60,35,0.3)');
+        browLeft.setAttribute('d', 'M50,56 Q62,48 74,56');
+        browRight.setAttribute('d', 'M106,56 Q118,48 130,56');
+        sparkles.setAttribute('opacity', '1');
+        break;
+      case 'thinking':
+        eyeLeftWhite.setAttribute('ry', '14');
+        eyeRightWhite.setAttribute('ry', '18');
+        eyeLeftPupil.setAttribute('ry', '7');
+        eyeRightPupil.setAttribute('ry', '9');
+        eyeLeftPupil.setAttribute('rx', '7');
+        eyeRightPupil.setAttribute('rx', '8');
+        mouth.setAttribute('d', 'M78,112 Q88,118 100,112');
+        mouth.setAttribute('fill', 'none');
+        browLeft.setAttribute('d', 'M52,60 Q60,56 68,62');
+        browRight.setAttribute('d', 'M110,62 Q118,56 128,60');
+        sparkles.setAttribute('opacity', '0');
+        setPupilOffset(-4, -3);
+        break;
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // PUPIL MOVEMENT
+  // ═══════════════════════════════════════════════════════
+  function setPupilOffset(ox, oy) {
+    eyeLeftPupil.setAttribute('cx', LEFT_EYE.cx + ox);
+    eyeLeftPupil.setAttribute('cy', LEFT_EYE.cy + oy);
+    eyeRightPupil.setAttribute('cx', RIGHT_EYE.cx + ox);
+    eyeRightPupil.setAttribute('cy', RIGHT_EYE.cy + oy);
+    eyeLeftHighlight.setAttribute('cx', LEFT_EYE.cx + ox + 4);
+    eyeLeftHighlight.setAttribute('cy', LEFT_EYE.cy + oy - 5);
+    eyeRightHighlight.setAttribute('cx', RIGHT_EYE.cx + ox + 4);
+    eyeRightHighlight.setAttribute('cy', RIGHT_EYE.cy + oy - 5);
+  }
+
+  function trackEyes(clientX, clientY) {
+    const rect = wrapper.getBoundingClientRect();
+    const blobCX = rect.left + rect.width / 2;
+    const blobCY = rect.top + rect.height / 2;
+    const dx = clientX - blobCX;
+    const dy = clientY - blobCY;
+    const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+    const maxDist = Math.max(window.innerWidth, window.innerHeight);
+    const factor = Math.min(dist / maxDist * 3, 1);
+    const ox = (dx / dist) * MAX_PUPIL_OFFSET * factor;
+    const oy = (dy / dist) * MAX_PUPIL_OFFSET * factor;
+    setPupilOffset(ox, oy);
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    isTrackingMouse = true;
+    if (currentExpression !== 'thinking' && currentExpression !== 'happy') {
+      trackEyes(e.clientX, e.clientY);
+    }
+    resetIdleEyes();
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    if (e.touches.length) {
+      mouseX = e.touches[0].clientX;
+      mouseY = e.touches[0].clientY;
+      isTrackingMouse = true;
+      if (currentExpression !== 'thinking' && currentExpression !== 'happy') {
+        trackEyes(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }
+  }, { passive: true });
+
+  // ═══════════════════════════════════════════════════════
+  // BLINK SYSTEM
+  // ═══════════════════════════════════════════════════════
+  let blinkInterval;
+  function blink() {
+    if (currentExpression === 'happy') return;
+    eyeLeftLid.setAttribute('ry', '19');
+    eyeLeftLid.setAttribute('opacity', '1');
+    eyeRightLid.setAttribute('ry', '19');
+    eyeRightLid.setAttribute('opacity', '1');
+    setTimeout(() => {
+      eyeLeftLid.setAttribute('ry', '0');
+      eyeLeftLid.setAttribute('opacity', '0');
+      eyeRightLid.setAttribute('ry', '0');
+      eyeRightLid.setAttribute('opacity', '0');
+    }, 150);
+  }
+
+  function scheduleNextBlink() {
+    blinkInterval = setTimeout(() => {
+      blink();
+      scheduleNextBlink();
+    }, 2000 + Math.random() * 3000);
+  }
+  scheduleNextBlink();
+
+  // ═══════════════════════════════════════════════════════
+  // IDLE EYE WANDERING
+  // ═══════════════════════════════════════════════════════
+  let idleEyeTimer;
+  let eyeWanderTimer;
+
+  function wanderEyes() {
+    if (isTrackingMouse || currentExpression === 'thinking') return;
+    const targets = [
+      { x: -4, y: -2 }, { x: 4, y: -2 },
+      { x: -3, y: 2 },  { x: 3, y: 2 },
+      { x: 0, y: -4 },  { x: 0, y: 0 },
+      { x: -5, y: 0 },  { x: 5, y: 0 },
+    ];
+    const t = targets[Math.floor(Math.random() * targets.length)];
+    setPupilOffset(t.x, t.y);
+  }
+
+  function startEyeWander() {
+    eyeWanderTimer = setInterval(wanderEyes, 2000 + Math.random() * 1500);
+  }
+  startEyeWander();
+
+  function resetIdleEyes() {
+    clearTimeout(idleEyeTimer);
+    idleEyeTimer = setTimeout(() => {
+      isTrackingMouse = false;
+      startEyeWander();
+    }, 3000);
+    clearInterval(eyeWanderTimer);
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // CHAT FUNCTIONS (preserved from original)
+  // ═══════════════════════════════════════════════════════
+  function addMessage(text, sender) {
+    const msgEl = document.createElement('div');
+    msgEl.className = `chat-msg ${sender}`;
+    if (sender === 'mint') {
+      msgEl.innerHTML = `<div class="leaf-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="14" height="14"><defs><radialGradient id="mi${Date.now()}" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#4DFFC0"/><stop offset="40%" stop-color="#00C882"/><stop offset="100%" stop-color="#008A5A"/></radialGradient></defs><path d="M24,4 C34,3 44,11 44,23 C44,37 36,44 24,44 C12,44 4,37 4,23 C4,11 14,5 24,4 Z" fill="url(#mi${Date.now()})"/><ellipse cx="17" cy="22" rx="5" ry="5.5" fill="white"/><ellipse cx="17" cy="22.5" rx="2.5" ry="2.9" fill="#1A1A2E"/><ellipse cx="31" cy="22" rx="5" ry="5.5" fill="white"/><ellipse cx="31" cy="22.5" rx="2.5" ry="2.9" fill="#1A1A2E"/><path d="M19,31 Q24,37 29,31" stroke="#006040" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><div class="bubble">${escapeHtml(text)}</div>`;
+    } else {
+      msgEl.innerHTML = `<div class="bubble">${escapeHtml(text)}</div>`;
+    }
+    chatHistory.appendChild(msgEl);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+    while (chatHistory.children.length > 6) {
+      chatHistory.removeChild(chatHistory.firstChild);
+    }
+  }
+
+  function escapeHtml(str) {
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  function showThinking() {
+    bubble.classList.remove('pop', 'hidden');
+    bubble.innerHTML = '<span class="thinking-dots"><span></span><span></span><span></span></span>';
+    void bubble.offsetWidth;
+    bubble.classList.add('pop');
+    setExpression('thinking');
+  }
+
+  function detectIgHandle(text) {
+    const atMatch = text.match(/@([a-zA-Z0-9_.]{1,30})/);
+    if (atMatch) return atMatch[1];
+    if (hasAskedForHandle) {
+      const cleaned = text.trim().replace(/^@/, '');
+      if (/^[a-zA-Z0-9_.]{2,30}$/.test(cleaned) && !cleaned.includes(' ')) return cleaned;
+    }
+    return null;
+  }
+
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text || isSending) return;
+
+    isSending = true;
+    sendBtn.disabled = true;
+    chatInput.value = '';
+
+    addMessage(text, 'user');
+    conversationHistory.push({ role: 'user', content: text });
+
+    const handle = detectIgHandle(text);
+    showThinking();
+
+    // Squish on send via spring impulse
+    springScaleX.impulse(0.15);
+    springScaleY.impulse(-0.2);
+    springJiggle1.impulse(0.4);
+
+    try {
+      const resp = await fetch(CONVEX_URL, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          message: text + (handle ? ` (my instagram handle is @${handle})` : ''),
+          context: 'getminted',
+          threadId: threadId
+        })
+      });
+
+      const newThreadId = resp.headers.get('X-Thread-Id');
+      if (newThreadId) threadId = newThreadId;
+
+      const reply = (await resp.text()) || "Hmm, my brain glitched. Try again? 😅";
+      conversationHistory.push({ role: 'assistant', content: reply });
+
+      if (/handle|instagram|ig |@|username|what'?s your/i.test(reply)) {
+        hasAskedForHandle = true;
+      }
+
+      // Happy bounce on reply
+      setExpression('happy');
+      springScaleX.impulse(-0.1);
+      springScaleY.impulse(0.12);
+      springJiggle1.impulse(0.3);
+      setTimeout(() => setExpression('idle'), 2000);
+
+      addMessage(reply, 'mint');
+      showBubble(reply.length > 50 ? reply.slice(0, 47) + '...' : reply);
+
+      if (handle) {
+        spawnParticles(12);
+        // Excited spin via rotation impulse
+        springRotation.impulse(25);
+        springScaleX.impulse(0.25);
+        springScaleY.impulse(-0.3);
+        springJiggle1.impulse(1.0);
+        springJiggle2.impulse(-0.7);
+        setExpression('excited');
+
+        setTimeout(() => {
+          showBubble("Building your site... 🚀");
+        }, 1500);
+
+        setTimeout(() => {
+          window.location.href = 'https://getminted.ai/dashboard/';
+        }, 2800);
+      }
+
+    } catch (err) {
+      console.error('API error:', err);
+      const fallback = "Oops, bad signal! Try that again? 📡";
+      addMessage(fallback, 'mint');
+      showBubble(fallback);
+      setExpression('surprised');
+      springScaleX.impulse(0.1);
+      springScaleY.impulse(0.15);
+      setTimeout(() => setExpression('idle'), 1500);
+    }
+
+    isSending = false;
+    sendBtn.disabled = false;
+    resetIdle();
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  // ═══════════════════════════════════════════════════════
+  // SPEECH BUBBLE
+  // ═══════════════════════════════════════════════════════
+  function showBubble(text) {
+    bubble.classList.remove('pop', 'hidden');
+    bubble.textContent = text;
+    void bubble.offsetWidth;
+    bubble.classList.add('pop');
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // IDLE TIMER
+  // ═══════════════════════════════════════════════════════
+  let idleTimer = null;
+  const nudges = [
+    "Go ahead, type something! 👇",
+    "Don't be shy, I don't bite 😄",
+    "I'm here whenever you're ready 💚"
+  ];
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  function resetIdle() {
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+      if (!isDragging && conversationHistory.length === 0) {
+        setPupilOffset(0, 0);
+        browLeft.setAttribute('d', 'M50,58 Q62,50 74,58');
+        browRight.setAttribute('d', 'M106,58 Q118,50 130,58');
+        showBubble(pick(nudges));
+
+        // Gentle attention-getting bounce
+        springScaleX.impulse(0.06);
+        springScaleY.impulse(-0.08);
+        springJiggle1.impulse(0.2);
+
+        setTimeout(() => {
+          browLeft.setAttribute('d', 'M52,62 Q62,56 72,60');
+          browRight.setAttribute('d', 'M108,60 Q118,56 128,62');
+        }, 3000);
+      }
+    }, 4000);
+  }
+  resetIdle();
+
+  // ═══════════════════════════════════════════════════════
+  // PARTICLES
+  // ═══════════════════════════════════════════════════════
+  function spawnParticles(count) {
+    const rect = wrapper.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+      const dist = 60 + Math.random() * 50;
+      const tx = Math.cos(angle) * dist;
+      const ty = Math.sin(angle) * dist;
+      const size = 4 + Math.random() * 5;
+      p.style.width = size + 'px'; p.style.height = size + 'px';
+      p.style.left = cx + 'px'; p.style.top = cy + 'px';
+      p.style.opacity = '1';
+      p.style.transition = `all ${0.4 + Math.random() * 0.3}s cubic-bezier(0.34, 1.56, 0.64, 1)`;
+      document.body.appendChild(p);
+      requestAnimationFrame(() => { p.style.transform = `translate(${tx}px, ${ty}px)`; p.style.opacity = '0'; });
+      setTimeout(() => p.remove(), 800);
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // EVENT LISTENERS
+  // ═══════════════════════════════════════════════════════
+  // Touch/mouse on the wrapper to START the interaction
+  wrapper.addEventListener('touchstart', handlePointerDown, { passive: true });
+  wrapper.addEventListener('mousedown', handlePointerDown);
+
+  // Move & up on the whole document so stretch can go beyond the blob
+  document.addEventListener('touchmove', (e) => {
+    if (isDragging) handlePointerMove(e);
+  }, { passive: false });
+  document.addEventListener('touchend', handlePointerUp, { passive: true });
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) handlePointerMove(e);
+  });
+  document.addEventListener('mouseup', handlePointerUp);
+
+  // Layout bubble above character
+  function layoutBubble() {
+    const zoneRect = zone.getBoundingClientRect();
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const bubbleTop = wrapperRect.top - zoneRect.top - 55;
+    bubble.style.top = Math.max(5, bubbleTop) + 'px';
+  }
+  layoutBubble();
+  window.addEventListener('resize', layoutBubble);
+  setInterval(layoutBubble, 200);
+
+  chatInput.addEventListener('focus', () => { resetIdle(); });
+
+  // Init
+  setExpression('idle');
+
+})();
 </script>
-<script src="https://bayouwebstudio.com/mint-widget.js?v=4"></script>
 </body>
 </html>
